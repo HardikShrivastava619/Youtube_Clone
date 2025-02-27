@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import {Link, useNavigate, useParams} from 'react-router-dom'
 import { FcGoogle } from "react-icons/fc";
-import  './setpassword.css'
+import  './Setpassword.css'
 import { MdOutlineSecurity } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import { RiKeyboardBoxFill } from "react-icons/ri";
