@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { MdOutlineDashboard } from "react-icons/md";
 import { BiSolidVideos } from 'react-icons/bi';
 import { MdAnalytics } from "react-icons/md";
-import './studioBar.css'
+import './StudioBar.css' 
 
 const Studiosidebar = () => {
   return (
