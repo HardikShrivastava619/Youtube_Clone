@@ -1,0 +1,110 @@
+.name-form-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+background-color: rgb(30,31, 32);
+}
+
+
+.light_name-form-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+background-color: white;
+}
+
+.nameformcontainer{
+    width: 75%;
+    height: 50%;
+    border-radius: 2rem;
+    background-color: rgb(14, 14, 14);
+    display: flex;
+}
+
+.light_nameformcontainer{
+    width: 75%;
+    height: 50%;
+    border-radius: 2rem;
+    background-color:whiteSmoke;
+    display: flex;
+}
+
+
+.nameform-entername-container{
+    width: 40%;
+height: 100%;
+padding: 2rem;
+cursor: pointer;
+}
+
+.nameform_entername{
+    margin-top: 1.5vh;
+}
+
+.nameform-inputs-container{
+    align-self: center;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+justify-content: space-evenly;
+}
+
+
+.nameform-next-btn{
+    height: 5vh;
+    width: 5vw;
+    background-color:  rgb(168, 199, 250);
+border: none;
+border-radius: 2rem;
+align-self: self-end;
+position: relative;
+bottom: 4vh;
+right: 4vw;
+}
+
+
+.name-input{
+    color: white !important;
+}
+
+.light_name-input{
+    color: black !important;
+    height: 7.5vh;
+    border-radius:5px ;
+}
+
+.light_name-input:focus{
+border-color: blue !important;
+}
+
+.name-input::placeholder {
+    color:white; 
+}
+    
+
+   .name-input:focus{
+    background-color: transparent;
+    color:white; 
+  
+}
+
+
+
+.name-input{
+height: 30%;
+background-color: transparent;
+
+}
+
+.lastname-input{
+    height: 30%;
+    background-color: transparent;
+    
+}

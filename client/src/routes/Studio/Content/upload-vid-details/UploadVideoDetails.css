@@ -1,0 +1,444 @@
+
+.form-control{
+    color: white !important;
+}
+
+.form-control::placeholder  {
+    color: white;
+    }
+    
+
+.form-select{
+background-color: transparent;
+color: white !important;
+}
+
+.form-select:focus {
+box-shadow: none;
+border-color:grey ;
+}
+ 
+.form-container{
+    scrollbar-width: none;
+}
+
+
+
+
+
+.upload-vid-RxCross{
+    cursor: pointer;
+}
+
+.upload-video-main-container{
+    display: flex;
+    height: 82%;
+    border-bottom:1px solid grey ;
+}
+    
+.main-form-container{
+scrollbar-width: none;
+overflow-y: auto;
+scrollbar-color: transparent;
+width: 67%;
+height: 100%;
+display: flex;
+flex-direction:column ;
+justify-content: space-between;
+padding: 2rem;
+}
+
+.Detail-heading{
+font-size: 900;
+}
+
+.description-input-container{
+margin-top: 2vh;
+position: relative;
+top: 2vh;
+}
+
+
+.description-input{
+    height: 18vh;
+    width: 100%;
+    border: 2px solid #888;
+    background-color: transparent;
+    margin-bottom: 4vh;
+}
+
+.thumbnail{
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.thumbnail-info{
+    font-size: small;
+}
+
+.thumbnail-options-container{
+    display: flex;
+    width: 50%;
+justify-content: space-around;
+}
+
+.upload-thumbnail{
+    background-color: transparent !important;
+    border: 1px dotted #888 !important ;
+    height: 15vh;
+    width: 40%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   font-size: small;
+   cursor: pointer;
+overflow-wrap: anywhere;
+}
+
+.thumbnail-options{
+    background-color: transparent !important;
+    border: 1px dotted #888 !important ;
+    height: 15vh;
+    width: 40%;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.upload-vid-playlist{
+    margin-top: 2vh;
+}
+
+.playlist-info{
+    font-size: small;
+}
+    
+.upload-vid-select-playlist{
+    margin-top: 2vh;
+        width: 50%;
+        height: 7vh;
+        background-color:rgb(60,60,60) !important ;
+        border-color:  white;
+    }
+    
+   .Audience-info-container{
+    margin-top: 2vh;
+   } 
+
+  .audience-heading{
+    font-weight: 900;
+  } 
+
+.childrens-privacy-info{
+    font-size: small;
+}
+
+.personalised-ads{
+padding: 1rem 1rem .5rem 1rem ;
+border-radius:.5rem ;
+display: flex;
+background-color:  rgb(33, 37, 41);
+justify-content: space-between;
+}
+
+.personalised-ads-RiInformationLine{
+    font-size: 1.5em;
+    position: relative;
+    top: 2vh;
+    right: .5vw;
+}
+
+.personalised-ads-info{
+    font-size: small;
+}
+
+.restriction-questions{
+    margin-top: 2vh;
+    font-size: x-small;
+}
+
+
+.age-restriction-selector{
+    
+margin-top: 2vh;
+background-color: rgb(60,60,60) !important;
+border: none;
+}
+
+
+.upload-vid-show-more-btn{
+    margin-top: 4vh;
+    width: 8vw;
+    border-radius: 1.5rem;
+    height: 2.5rem;
+}
+
+
+.tags-main-container{
+    margin-top: 2vh;
+}
+
+.tags-info{
+    font-size: small;
+    color: silver;
+}
+
+.tags-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.tag-label{
+    font-size: small;
+    color: silver;
+}
+
+.lang-selector-main-container{
+    margin-top: 2vh;
+}
+
+.select-lang-label{
+    font-size: small;
+}
+
+.recording-date-location-main-container{
+margin-top: 2vh;
+}
+
+.recording-date-location-main-container-info{
+    color: silver;
+    font-size: small;
+}
+
+.recording-date-location-second-main-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.recording-date-container{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.upload-vid-date-selecter-label{
+    font-size: x-small;
+}
+
+.upload-vid-date-selecter{
+    height: 8vh;
+    }
+
+.recording-location-container{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+   }
+
+ .upload-vid-location-label{
+font-size: x-small;
+ }  
+
+.upload-vid-location-selecter{
+    height: 8vh;
+}
+
+.category-container{
+    margin-top: 2vh;
+}
+
+.category-info{
+    color: silver;
+    font-size: small;
+}
+
+.category-selector{
+    color: white;
+    background-color: rgb(60,60,60);
+width: 50%;
+    height: 8vh;
+    border-color: white;
+    border-radius:8px ;
+}
+
+
+
+
+
+
+.comments-and-rating-container{
+   margin-top: 2vh; 
+}
+
+.comments-and-rating-info{
+   color: silver;
+   font-size: small; 
+}
+
+.comments-and-rating-container-main-div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.upload-vid-comments-selector-main-container{
+ display: flex;
+ flex-direction: column;
+ width: 40%;   
+}
+
+.upload-vid-comment-selecter-label{
+    font-size: x-small;
+}
+
+.upload-vid-comment-selecter{
+    color: white;
+    background-color: rgb(60,60,60);
+    height: 8vh;
+    border-color: white;
+    border-radius:8px ;
+}
+
+.upload-vid-moderation-selector-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 40%;   
+}
+
+.upload-vid-moderation-selecter-label{
+    font-size: x-small !important ;
+
+}
+
+
+
+
+
+.form-control{
+    background-color: rgb(60,60,60);
+}
+
+
+.form-control:focus {
+    background-color: transparent;
+    box-shadow: none;
+    border: 2px solid white;
+}
+
+.dropdown-item:hover{
+background-color: black;
+}
+
+
+
+
+
+
+.upload-video-checkbox{
+    margin-top: 5vh;
+
+}
+
+
+
+
+/************************************************************************* uploaded-video-SecondSide********************************************/
+
+.uploaded-video-main-container{
+    display: flex;
+    justify-content: center;
+    width: 33%;
+}
+
+
+.uploaded-video{
+    margin-top: 5vh;
+    background-color: black;
+        width: 80%;
+        height: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    }
+    
+.iframe-uploaded-div{
+    width: 98%;
+    height: 60%;
+}
+
+.iframe-uploaded-vid-secdiv{
+    width: 100%;
+    height: 40%;
+}
+
+.iframe-uploaded-vid-link-copyicon-container{
+    height: 50%;
+    display: flex;
+}
+
+.iframe-uploaded-vid-link-container{
+    height: 100%;
+    padding: 1vh 1vw;
+    flex-direction: column;
+    width: 80%;
+}
+.video-link-heading{
+    color: silver;
+    font-size: small;
+    display: block;
+}
+
+.upload-vid-link{
+    font-size: x-small;
+}
+
+.MdOutlineContentCopy{
+    position: relative;
+    top: 2vh;
+    left: 1vw;
+    cursor: pointer;
+}
+
+.uploaded-vid-filename-container{
+    padding: 1vh .5vw;
+}
+
+.uploaded-vid-filename-heading{
+    font-size: small;
+    color: silver;
+}
+
+.uploaded-vid-filename{
+    font-size: small;
+}
+
+
+.upload-vid-next-button-container{
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.next-button-container-icons-container{
+    width: 30%;
+    margin-left: 1vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checks-complete-info{
+    font-size: small;
+    margin-top: .4vh;
+}
+
+.uploaded-div-next-button{
+    border-radius: 1.5rem;
+    height: 5vh;
+    margin-right: 1vw;
+}

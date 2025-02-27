@@ -1,0 +1,116 @@
+.ChooseAccount-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+background-color: rgb(30,31, 32);
+}
+.loading-bar {
+    height: .4%;
+    width: 30%; /* Size of the moving bar */
+    background-color: #17a2b8; /* Progress bar color (info color) */
+    animation: moveRight 2s linear infinite;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(-100%); /* Start outside on the left */
+    }
+    100% {
+        transform: translateX(100%); /* End outside on the right */
+    }
+}
+.otpverific-container{
+    width: 75%;
+    height: 50%;
+    border-radius: 2rem;
+    background-color: rgb(14, 14, 14);
+    display: flex;
+}
+.otpverific-google-container{
+width: 50%;
+height: 100%;
+color: white;
+padding: 2rem;
+cursor: pointer;
+}
+
+.existing-email{
+margin-top: 4vh;
+font-family: Open Sans, sans-serif;
+font-weight: 100;
+}
+
+
+.otp-input-container-email{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+}
+ 
+
+.OTP-email-input{
+    width: 95%;
+    height: 20%;
+background-color: transparent;
+}
+
+.OTP-email-input:focus{
+    background-color: transparent;
+    color: white;
+}
+
+.OTP-email-input-heading{
+    color: rgb(168, 199, 250);
+    font-size: small;
+
+
+}
+
+.confirm-alert{
+    font-size: small;
+    color: antiquewhite;
+    margin-left: 1vw;
+}
+
+.otpverif-input-btn-container{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  align-items: flex-end;
+}
+
+.OTP-next-btn{
+    background-color: rgb(168, 199, 250) ;
+    border:none ;
+    border-radius:2rem ;
+    padding: .5em 2em;
+     color:  rgb(20, 60, 124);
+        align-self: end;
+}
+
+
+
+
+
+.Backlink-and-btn-container{
+display: flex;
+width: 50%;
+justify-content: space-evenly;    
+}
+
+
+    .back-link{
+        text-decoration: none;
+        font-size: medium;
+        color:rgb(168, 199, 250) ;
+        margin-top: 1vh;
+    }
+
+

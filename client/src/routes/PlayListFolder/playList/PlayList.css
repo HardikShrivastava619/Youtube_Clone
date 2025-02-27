@@ -1,0 +1,189 @@
+
+.img_noPlaylist{
+margin: auto;
+width: 101%;
+height: 93%;
+}
+  
+
+
+
+
+
+.light_playlist_main{
+  height: 92vh;
+  width: 82vw;
+  padding: 1rem;
+  color: black;
+}
+
+
+.playlist_main{
+  height: 92vh;
+  width: 82vw;
+  padding: 1rem;
+  color: white;
+}
+
+
+.playList_heading{
+  font-weight: 900;
+}
+
+.playList_container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1vh 0vw 0vh 0vw ;
+  overflow-y: auto;
+  height: 93.7%;
+  scrollbar-width: thin;
+  scrollbar-color: #222 transparent;
+}
+
+
+
+.three_dots{
+  position: relative;
+  left: 1.4vw;
+  cursor: pointer;
+  font-size: large;
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+
+.light_three_dots{
+  position: relative;
+  left: 1.4vw;
+  cursor: pointer;
+  font-size: large;
+  border: none;
+  background-color: transparent;
+  color: black;
+}
+.three_dots:hover{
+background-color: #222;
+border-radius: 50%;
+}
+
+
+
+.light_three_dots:hover{
+  background-color: silver;
+  border-radius: 50%;
+  }
+
+.pldropdown-menu{
+  background-color: #222 !important;
+  width: 10vw !important ;
+}
+
+.light_pldropdown-menu{
+  background-color:  silver !important;
+  width: 10vw !important ;
+}
+
+
+
+.light_pldropdown-item{
+ 
+  display: flex;
+  align-items: center;
+}
+  
+
+.light_pldropdown-item:hover{
+  background-color:silver !important ;
+ 
+ }
+ 
+
+.pldropdown-item{
+ 
+display: flex;
+align-items: center;
+
+}
+
+.pldropdown-item:hover{
+  background-color: rgb(20, 20, 20) !important ;
+}
+
+.playList_modal_RiDeleteBin5Line{
+  font-size: x-large;
+  margin-right: 1vw;
+}
+
+.hover_Play_all{
+  position: relative;
+  text-align: center;
+  height: .1vh;
+}
+
+.playList_main_div{
+margin-left: 1vw;
+width: 23%;
+height: 30vh;
+cursor: pointer;
+text-decoration: none;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+}
+
+.num_of_vid{
+  position: relative;
+top: 21vh;
+  left: 14vw;
+width: 4vw;
+  background-color: #222222a4;
+border-radius: 4px;
+font-size: small;
+padding: .1rem;
+
+}
+
+
+.playList_para{
+  font-size: small;
+}
+
+.thumbnail_playlist{
+  width: 100%;
+  height: 63%;
+  border-radius: .5rem;
+}
+
+.playList_name_container{
+  padding: 1vh 1vw 0vh 0vw;
+  
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 5vh;
+}
+
+
+
+.view_full_playList{
+  color: silver;
+  font-size: small;
+  text-decoration: none;
+}
+
+
+.view_full_playList:hover{
+  color: skyblue;
+  text-decoration: underline;
+}
+
+.playList_modal{
+  position: relative;
+  bottom: 10vh;
+  height:8vh;
+  border-radius: 10px;
+  width: 12vw;
+  background-color: #222;
+  z-index: 2;
+}

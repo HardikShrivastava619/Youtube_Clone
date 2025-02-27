@@ -1,0 +1,50 @@
+.channel-page{
+    color: aliceblue;
+  width:100vw;
+  height: 92vh;
+  padding-top: 2rem;
+  background-color: rgb(40, 40, 40);
+  }
+  
+  .channel-heading{
+    margin:3vh;
+  }
+  
+  .options-container{
+   display: flex;
+   gap: 2.5vw; 
+  }
+  
+  .channel_warning{
+    justify-self: center;
+  }
+  
+  .options{
+  color: #888;
+  text-decoration: none;
+  
+  }
+  
+  .options:focus{
+  color: white;
+  border-bottom: 2px solid white;
+  }
+  
+  .filter-container{
+    gap: 2.5vw; 
+    display:flex;
+  flex-direction: row;
+    border: 1px solid grey;
+  align-items: center;
+  padding: .5rem;
+  }
+  
+  .vid-cont{
+    display: flex;
+  justify-content: center;
+  }
+  
+  .filter-Line{
+    font-size: x-large;
+  }
+  

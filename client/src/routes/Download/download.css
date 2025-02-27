@@ -1,0 +1,920 @@
+.large-Download_video-page{
+    overflow-y: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    height: 42rem;
+  }
+  
+  .no_download_img-container{
+    display: flex;
+    width: 100vw;
+    height: 90vh;  
+    justify-content: center;
+ flex-direction: column;
+ align-items: center;
+  }
+
+  .no_download_img{
+    width: 60%;
+    height: 50%;
+  }
+
+  .no_download_img_text{
+    color: white;
+    position: relative;
+    bottom: 18vh;
+  }
+
+
+
+ .download_modal{
+  background-color: rgb(30, 30, 30);
+  color: white;
+  width: 20vw;
+  padding: 1vh 1.5vw .3vh 1.5vw;
+  position: absolute;
+  top: 32vh;
+  right: 45vw;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius:1rem ;
+ } 
+
+
+ .delete_download_modal{
+  background-color: rgb(30, 30, 30);
+  color: white;
+  width: 20vw;
+  padding: 2vh 1.5vw 2vh 1.5vw;
+  position: absolute;
+  top: 32vh;
+  right: 45vw;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius:1rem ;
+ } 
+
+.remove_downkoad_heading{
+ font-size: larger;
+  height: 8vh;
+}
+
+
+ .largeVid_title{
+  height: 3%;
+ }
+
+ .btn-cancelDownload:hover{
+background-color: #888;
+ }
+ .btn-cancelDownload{
+  border-radius: 2rem;
+  border: none;
+  background-color: transparent;
+  color: white;
+  padding: .5rem .8rem;
+ }
+
+.btn-Download-download-btn:hover{
+  background-color: rgb(38,56,80);}
+
+ .btn-Download-download-btn{
+  border-radius: 2rem;
+  border: none;
+  background-color: transparent;
+  color: rgb(62, 166, 255);
+  padding: .5rem .8rem;
+}
+
+.btn-delete-download-btn:hover{
+  background-color: rgb(38,56,80);}
+
+ .btn-delete-download-btn{
+  border-radius: 2rem;
+  border: none;
+  background-color: transparent;
+  color: rgb(62, 166, 255);
+  padding: .5rem 1.8rem;
+}
+
+
+.download-modal-AiFillYoutube{
+  color: red;
+font-size: x-large;
+display: inline;
+}
+  
+.download-modal-SiYoutubetv{
+  font-size: 1.5rem;
+
+max-height: 5%;
+color: red;
+margin-bottom: .6vh;
+
+}
+.SiYoutubetv-div-container{
+font-size: small; 
+display: flex;
+align-items: center;
+font-family: fantasy;
+
+}
+
+.download_yes_no_options{
+  display: flex;
+  justify-content: space-between;
+  width:  50%;
+  font-size: medium;
+cursor: pointer;
+align-self: flex-end;
+margin-right: 2vw;
+
+}
+
+.vid_page_LiaDownloadSolid{
+  font-size: 1.5rem;
+}
+
+.vid_page_LiaDownloadSolid_started{
+  font-size: 1.5rem;
+  color: rgba(0, 149, 255, 0.945)
+}
+
+  .rxcross{
+  margin-top: .5vh;
+  }
+  
+  .rxcross:hover{
+  background-color: #222;
+  
+  }
+  
+  .video-screen{
+    width: 100%;
+    
+  border-radius: 2rem;
+    height: 75%;
+  }
+  
+
+
+  .large-Download_video-container{
+    margin-top: 2rem;
+  border: none;
+    width: 65%;
+    min-height:80vh ; 
+  }
+  
+  .largevideo-playlist{
+    width: 30%;
+    margin-top: 2rem;
+  }
+  
+  
+  .large-videos-channel-btn-container{
+  height: 13%;
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .light_large-videos-channel-btn-container{
+    height: 13%;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    }
+  
+    
+
+.largevideo-playlist-shorts{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+  overflow-x: auto;
+  flex-direction: row;
+  scrollbar-width: none;
+  width: 100%;
+  height: 28vh;
+}
+
+  .large-Download_video-channel-container{
+    display: flex;
+  
+    width:35% !important;
+    justify-content: space-between;
+    }
+  
+    .large-Download_video-channelName-container{
+height: 100%;
+max-width: 50%;
+text-align: center;
+    }
+
+    .large-Download_video-channelName{
+      margin-top: 2.2vh;
+height: 1vh ;
+    }
+  .large-Download_video-subscribersNum{
+    font-size: .8rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .largevid-BiLike{
+    font-size: 1.5rem;
+    margin-bottom: .5vh;
+  }
+
+  .like_middle_line{
+    background-color: white;
+    display: inline;
+    border: 0.01px solid grey;
+  }
+
+  .large-Download_video-Allbtn-container{
+    height: 100%;
+    min-width: 50%;
+    padding-left:4rem ;
+  }
+  
+  .large-vid-subscribeBtn{
+    margin: auto;
+    border: none;
+    font-size: 0.9rem;
+    border-radius: 2rem;
+    padding: .5rem 1rem; 
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+   
+  .like-btn{
+   padding: .2rem 1.8rem ;
+   background-color: rgba(255, 255, 255, 0.1);
+   border: none;
+   border-radius: 1rem;
+   color: aliceblue;
+   font-size: 18px;
+  border-top-right-radius:0rem ;
+  border-bottom-right-radius:0rem ;
+  margin-top: 1.3rem;
+  }
+  
+  .like-btn:hover{
+    background-color: #888;
+  }
+  
+  .likeDone-btn{
+    padding: .2rem 1.8rem ;
+    background-color:white;
+    border: none;
+    border-radius: 1rem;
+    color: black;
+    font-size: 18px;
+   border-top-right-radius:0rem ;
+   border-bottom-right-radius:0rem ;
+   margin-top: 1.3rem;
+   }
+  
+  .unlike-btn{
+    padding: .2rem 1.5rem ;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 1rem;
+    color: aliceblue;
+    font-size: 18px;
+   border-top-left-radius:0rem ;
+   border-bottom-left-radius:0rem ;
+  }
+  
+  .unlikeDone-btn{
+    padding: .2rem 1.5rem ;
+    background-color:white;
+    border: none;
+    border-radius: 1rem;
+    color: black;
+    font-size: 18px;
+   border-top-left-radius:0rem ;
+   border-bottom-left-radius:0rem ;
+  }
+  
+  .unlike-btn:hover{
+    background-color: #888;
+  }
+  
+  
+  .share-btn{
+    padding: .3rem  1rem ;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius:2rem;
+    color: aliceblue;
+    font-size: 18px;
+  }
+  .share-btn:hover{
+    background-color: #888;
+  }
+  
+  .share-btn{
+    margin:0vh .25vw 0vh .25vw ;
+font-size: 1.5rem;
+  }
+  
+  
+  .download-btn{
+    padding: .3rem .6rem ;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 2rem;
+    color: aliceblue;
+    font-size: 18px;
+   margin:0vh .25vw 0vh .25vw ;
+  }
+  
+  .download-btn:hover{
+    background-color: #888;
+  }
+  
+  .horizontal-dots{
+    padding: .3rem .6rem ;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: aliceblue;
+    font-size: 18px;
+    margin-right: .5rem;
+  }
+  
+  
+  .horizontal-dots:hover{
+    background-color: #888;
+  }
+  
+  
+  
+  .HiOutlineDotsHorizontal_modal{
+    background-color: rgb(30, 30, 30);
+  color: white;
+  width: 15%;
+  padding: 1vh 1.5vw 0vh 1.5vw;
+  position: absolute;
+  top: 38vh;
+  right: 45vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius:1rem ;
+  }
+  
+  
+  .HiOutlineDotsHorizontal{
+    margin-bottom: auto;
+  }
+  .HiOutlineDotsHorizontal_modal_firstDiv{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .option_container{
+    display: flex;
+    justify-content: space-between;
+  }
+   
+  .HiOutlineDotsHorizontal_modal_playlist_div{
+    display: flex;
+    justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  }
+  
+  .HiOutlineDotsHorizontal_modal_SecondDiv{
+    display: flex;
+    justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  }
+  
+  .existingsPlayList_modal{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    width: 15%;
+    padding: 1vh 1.5vw 0vh 1.5vw;
+    position: absolute;
+    top: 38vh;
+    right: 45vw;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius:1rem ;
+  }
+  
+  .existingsPlayList_modal_div1{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .existingsPlayList_modal_div2{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-self: center;
+  height: 4vh;
+  font-size: small;
+  color: silver;
+  cursor: pointer;
+  }
+  
+  .select_PlayList{
+    background-color: #2c2f33;
+    margin-bottom:2vh;
+    border: none;
+    width: 100%;
+    font-size: small;
+    color: white;
+  }
+  
+  .MdOutlineFeaturedPlayList{
+    font-size: x-large;
+    
+  }
+  
+  .FiPlus{
+    font-size: x-large;
+    margin-bottom: 2vh;
+    }
+    
+  
+  .create_playList{
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: small;
+  margin-bottom: .5rem;
+  color: skyblue;
+  position: relative;
+  left: 4rem;
+  }
+  
+  .large-Download_video-profile-image{
+    border: none;
+    border-radius: 2rem;
+    margin-left: .3rem;
+    margin-top: 1.3vh;
+    width: 14%;
+    height: 55%;
+  }
+  
+.shorts_largevid{
+width: 32%;
+overflow: hidden;
+display: flex;
+align-items: center;
+}
+
+.shorts_largevid_thumbnail{
+  width: 100%;
+  height: 98%;
+}
+  
+.largvid_othervid{
+  text-decoration: none;
+  justify-content: space-around;
+  display: flex;
+  height: 12vh;
+  margin-top: .5rem;
+  overflow: hidden;
+}
+
+.largvid_othervid-details-container{
+  display: flex;
+  flex-direction: column;
+  width: 19vw;
+
+}
+
+.largvid_othervid-thumbnail{
+  border: 2px solid grey;
+  border-radius: 1rem;
+  width: 10vw;
+}
+  .large-Download_video-details-container{
+    border: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2c2f33;
+  }
+
+  .largvid_othervid-details-channelName{
+    font-size: .8rem;
+    color: grey;
+  }
+  
+  .largvid_othervid-details-title{
+    height: 60%;
+    overflow-wrap: break-word;
+    color: white;
+  }
+  .FaRegSquare{
+  margin-top: 1vh;
+    height: 2vh;
+  width: 2vw;
+  }
+  
+  
+  .playlistName{
+    background-color: transparent !important ;
+    color: white;
+    border: none;
+    border-bottom: 1px solid silver;
+    margin-bottom: 1rem;
+  }
+  
+  .playlistSelectPrivacy{
+    background-color: rgb(40, 40, 40) ;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .showMore_btn{
+    cursor: pointer;
+  }
+  
+  .videoPage_description_para{
+    display: inline;
+  
+  }
+  
+  .large_vid_page_comments_container{
+  
+    padding: 1rem;
+  }
+  .comments_heading_video_page{
+    font-weight: 800;
+  }
+  
+  
+  
+  .comments_input_video_page_container{
+  margin-top: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  }
+  
+  .large-Download_video-comments_profile-image{
+    border-radius: 50%;
+    width: 3.2vw;
+    height: 6.5vh;
+  align-self: start;
+  
+  }
+  
+  .btn-info{
+    border-radius: 25px !important; 
+  font-weight: 800;
+  }
+  
+  .btn-outline-dark{
+    border-radius: 25px !important;
+    color: white !important;
+    border: none !important;
+  }
+  
+  .large_video_comment_input{
+  background-color: transparent;
+  border: none;
+  border-bottom:1px solid white ;
+  width: 100%; 
+  color: white;
+  }
+  
+  .comments_input_video_page_main_container{
+    width: 90%;
+  display: flex;
+  flex-direction: column;
+  
+  }
+  
+  
+  .largeVid_comment_btn_Container{
+    width: 25%;
+  align-self: end;
+    display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 1vh;
+  }
+  
+  
+  .user_comments_video_page_container{
+  display: flex;
+  margin: 2vh 0vw 0vh 1vw ;
+  align-items: center;
+  justify-content: space-between;
+  }
+  
+  
+  .comments_like_disLike_btn{
+    width: 9%;
+    display: flex;
+    justify-content: space-between;
+   position: relative;
+   bottom: 1vh; 
+  font-size: large;
+  align-items: center;
+  }
+  
+  .coments_like_num{
+    font-size: small;
+  color: rgba(128, 128, 128, 0.918);
+  }
+  
+  .lagreVid_comment_delete_dropdown{
+  padding-left: .5rem !important ;
+  cursor: pointer;
+  color: white !important;
+  }
+  
+  
+  .commented_user_name{
+    font-size: small;
+    
+  }
+  
+  
+  .user_comments_video_page{
+    width: 85%;
+    overflow-wrap: anywhere;
+  }
+  
+  
+  .videosPage_RxDotsVertical{
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .large-Download_video-commented_user_profile-image{
+    border-radius: 50%;
+    width: 3vw;
+    height: 6.5vh;
+    align-self: start;
+  }
+  
+
+.large-Download-video-channel-container{
+    display: flex;
+    width: 15vw;
+    margin-top: .5rem;
+  }
+  
+  .otherDownloadedVideos{
+    display: flex;
+    align-items: center;
+    height: 12vh;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    width:100%;
+  }
+  
+  
+  .download-video-profile-image{
+    border: none;
+    border-radius: 50%;
+    margin: .5rem;
+    width: 20%;
+    height: 55%;
+  }
+  
+  .downloaded_otherVideos_thumbnail{
+    border:2px solid grey;
+     border-Radius:1rem;
+      width:38%;
+      height: 100%;
+    }
+  
+  .downloaded_otherVideos_info_container{
+    display:flex; 
+    flex-direction:column;
+    justify-content: center;
+    width:60%;
+    margin-left: .5vw;
+  }
+  
+  .downloaded_otherVideos_info_title{
+    color: white ;
+  }
+  
+  .light_downloaded_otherVideos_info_title{
+    color: black ;
+  }
+
+  .downloaded_otherVideos_info_channelName{
+    color: Grey;
+    margin-top:1rem;
+    font-size:.8rem;
+  }
+
+  .download_large-video-details-container{
+    border: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2c2f33;
+  }
+
+  .light_download_large-video-details-container{
+    border: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(192, 192, 192, 0.234);
+    color: black;
+  }
+
+  .download-video-playlist{
+  width: 26%;
+  margin-top: 2rem;
+  height: 72%;
+  border-radius: 1rem;
+  }
+  
+  .download-playlist-heading{
+  display: flex;
+  justify-content: space-between;
+  color: #f1f1f1;
+  height: 15%;
+  font-size: 1.3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 1rem;
+  border-top-right-radius:1rem ;
+  border-top-left-radius:1rem ;
+  background-color:#2c2f33 ;
+  
+  border: 1px solid grey;
+  }
+  
+  .light_download-playlist-heading{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    height: 15%;
+    font-size: 1.3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 1rem;
+    border-top-right-radius:1rem ;
+    border-top-left-radius:1rem ;
+    background-color:white;
+    border: 1px solid grey;
+    }
+    
+  .download-videos-in-playlist{
+   padding-left: 1vw;
+   overflow-y: auto;
+   height: 85%;
+   scrollbar-width: none;
+   border: 1px solid grey;
+   border-bottom-right-radius: 1rem;
+   border-bottom-left-radius: 1rem;
+  }
+  .light_download-videos-in-playlist{
+      padding-left: 1vw;
+     overflow-y: auto;
+     scrollbar-width: none;
+     height: 85%;
+     border: 1px solid grey;
+     border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    }
+    
+
+  .main-download-page{
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    scrollbar-color: #888 #2c2f33;
+    overflow-y:auto ;
+    flex-wrap: wrap;
+  }
+  
+  
+  .downloaded-video{
+  height:40%;
+  width: 18%;
+  margin-left: 1%;
+  border-radius: 1rem;
+  text-decoration: none;
+  }
+  
+  .downloaded-video-screen{
+  width: 100%;
+  height: 50%;
+  border-radius: 1rem;
+  }
+  
+  .downloaded-video-info{
+    min-height: 10%;
+  max-height: 14%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  
+  
+  .downloaded-video-title{
+    width: 85%;
+    padding: 4%;
+    font-size: .9rem;
+    color: white;
+  }
+  
+  .light_downloaded-video-title{
+    width: 85%;
+    padding: 4%;
+    font-size: .9rem;
+    color: black;
+  }
+  
+  
+  .downloadVid_delete_dropdown{
+    color: white !important;
+  font-size: small !important;
+  padding: 1vw 1vh!important;
+  min-width: 12vw !important;
+  }
+  
+  .light_downloadVid_delete_dropdown{
+    color: black !important;
+  font-size: small !important;
+  padding: 1vw 1vh!important;
+  min-width: 12vw !important;
+  }
+  
+
+
+  .RiDeleteBin6Line-downloadVid_delete_dropdown{
+    margin-right: .5vw;
+  }
+  .downloaded-video-3dots{
+    margin-right: .5rem;
+    font-size: 1.em;
+    color: white;
+    width: 13%;
+  text-align: center;
+  height: 100%;
+  position: relative;
+  left: .5vw;
+  border-radius: 50%;
+  }
+  
+  .downloaded-video-3dots:hover{
+    background-color: #2c2f33;
+  }
+  
+  .downloaded-video-sanps{
+    padding: 0rem 0rem 0rem .8rem;
+    color: silver;
+    display: flex;
+    height: 30%;
+    font-size: .8em;
+    flex-direction: column;
+  }
+
+  .light_downloaded-video-sanps{
+    padding: 0rem 0rem 0rem .8rem;
+    color: black;
+    display: flex;
+    height: 30%;
+    font-size: .8em;
+    flex-direction: column;
+  }
+
+
+  .downloaded-video-sanps-downloadoption{
+  height: 1.3rem;
+  text-align: center;
+  width: 5rem;
+  background-color: #2c2f33;
+  
+    }
+
+    
+  .light_downloaded-video-sanps-downloadoption{
+    height: 1.3rem;
+    text-align: center;
+    width: 5rem;
+    background-color: silver;
+}
+  
+  

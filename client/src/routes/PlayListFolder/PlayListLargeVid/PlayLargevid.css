@@ -1,0 +1,394 @@
+.large-video-page{
+    overflow-y: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    height: 42rem;
+  }
+  
+  .video-screen{
+    width: 100%;
+    
+  border-radius: 2rem;
+    height: 75%;
+  }
+  
+  .large-video-container{
+    margin-top: 2rem;
+  border: none;
+    width: 65%;
+    min-height:80vh ; 
+  }
+  
+  .largevideo-playlist{
+    width: 30%;
+    margin-top: 2rem;
+  }
+  
+  
+  .large-videos-channel-btn-container{
+  height: 13%;
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .large-video-channel-container{
+    height: 100%;
+    width: 18%;
+    }
+  
+  
+  
+  .large-video-Allbtn-container{
+    height: 100%;
+    min-width: 50%;
+    padding-left:4rem ;
+  }
+  
+  .large-vid-subscribeBtn{
+    margin: auto;
+    border: none;
+    font-size: 0.9rem;
+    border-radius: 2rem;
+    padding: .5rem 1rem; 
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+   
+  .like-btn{
+   padding: .2rem 1.8rem ;
+   background-color: rgba(255, 255, 255, 0.1);
+   border: none;
+   border-radius: 1rem;
+   color: aliceblue;
+   font-size: 18px;
+  border-top-right-radius:0rem ;
+  border-bottom-right-radius:0rem ;
+  margin-top: 1.3rem;
+  }
+  
+  .like-btn:hover{
+    background-color: #888;
+  }
+  
+  .likeDone-btn{
+    padding: .2rem 1.8rem ;
+    background-color:white;
+    border: none;
+    border-radius: 1rem;
+    color: black;
+    font-size: 18px;
+   border-top-right-radius:0rem ;
+   border-bottom-right-radius:0rem ;
+   margin-top: 1.3rem;
+   }
+  
+  .unlike-btn{
+    padding: .2rem 1.5rem ;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 1rem;
+    color: aliceblue;
+    font-size: 18px;
+   border-top-left-radius:0rem ;
+   border-bottom-left-radius:0rem ;
+  }
+  
+  .unlikeDone-btn{
+    padding: .2rem 1.5rem ;
+    background-color:white;
+    border: none;
+    border-radius: 1rem;
+    color: black;
+    font-size: 18px;
+   border-top-left-radius:0rem ;
+   border-bottom-left-radius:0rem ;
+  }
+  
+  .unlike-btn:hover{
+    background-color: #888;
+  }
+  
+  
+  .share-btn{
+    padding: .3rem  1rem ;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius:2rem;
+    color: aliceblue;
+    font-size: 18px;
+  }
+  .share-btn:hover{
+    background-color: #888;
+  }
+  
+  
+  
+  .playlist-btn{
+    padding: .3rem .6rem ;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 2rem;
+    color: aliceblue;
+    font-size: 18px;
+   
+  }
+  
+  .playlist-btn:hover{
+    background-color: #888;
+  }
+  
+  .horizontal-dots{
+    padding: .3rem .6rem ;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: aliceblue;
+    font-size: 18px;
+    margin-right: .5rem;
+  }
+  
+  
+  .horizontal-dots:hover{
+    background-color: #888;
+  }
+  
+  
+  
+  .HiOutlineDotsHorizontal_modal{
+    background-color: rgb(30, 30, 30);
+  color: white;
+  width: 15%;
+  padding: 1vh 1.5vw 0vh 1.5vw;
+  position: absolute;
+  top: 38vh;
+  right: 45vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius:1rem ;
+  }
+  
+  
+  .HiOutlineDotsHorizontal{
+    margin-bottom: auto;
+  }
+  .HiOutlineDotsHorizontal_modal_firstDiv{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .option_container{
+    display: flex;
+    justify-content: space-between;
+  }
+   
+  .HiOutlineDotsHorizontal_modal_playlist_div{
+    display: flex;
+    justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  }
+  
+  .HiOutlineDotsHorizontal_modal_SecondDiv{
+    display: flex;
+    justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  }
+  
+  .existingsPlayList_modal{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    width: 15%;
+    padding: 1vh 1.5vw 0vh 1.5vw;
+    position: absolute;
+    top: 38vh;
+    right: 45vw;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius:1rem ;
+  }
+  
+  .existingsPlayList_modal_div1{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .existingsPlayList_modal_div2{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-self: center;
+  height: 4vh;
+  font-size: small;
+  color: silver;
+  cursor: pointer;
+  }
+  
+  .select_PlayList{
+    background-color: #2c2f33;
+    margin-bottom:2vh;
+    border: none;
+    width: 100%;
+    font-size: small;
+    color: white;
+  }
+  
+  .MdOutlineFeaturedPlayList{
+    font-size: x-large;
+    
+  }
+  
+  .FiPlus{
+    font-size: x-large;
+    margin-bottom: 2vh;
+    }
+    
+  
+  .create_playList{
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: small;
+  margin-bottom: .5rem;
+  color: skyblue;
+  position: relative;
+  left: 4rem;
+  }
+  
+  .large-video-profile-image{
+    border: none;
+    border-radius: 2rem;
+    margin-left: .3rem;
+  }
+  
+  .large-video-details-container{
+    border: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2c2f33;
+  }
+  
+  .FaRegSquare{
+  margin-top: 1vh;
+    height: 2vh;
+  width: 2vw;
+  }
+  
+  
+  .playlistName{
+    background-color: transparent !important ;
+    color: white;
+    border: none;
+    border-bottom: 1px solid silver;
+    margin-bottom: 1rem;
+  }
+  
+  .playlistSelectPrivacy{
+    background-color: rgb(40, 40, 40) ;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  /* Extra playlist page styling        */
+  
+  .large-Download-video-channel-container{
+    display: flex;
+    width: 15vw;
+    margin-top: .5rem;
+  
+  }
+  
+  
+  
+  .playlist-video-profile-image{
+    border: none;
+    border-radius: 2rem;
+    margin: .5rem;
+  }
+  
+  
+  .playlist-video-playlist{
+  width: 26%;
+  margin-top: 2rem;
+  height: 72%;
+  border-radius: 1rem;
+  border: 1px solid grey;
+  }
+  
+  .playlist-playlist-heading{
+  display: flex;
+  justify-content: space-between;
+  color: #f1f1f1;
+  height: 15%;
+  font-size: 1.3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: .9rem;
+  border-top-right-radius:1rem ;
+  border-top-left-radius:1rem ;
+  background-color:#2c2f33 ;
+  }
+  
+  
+  .playlist-videos-in-playlist{
+    height: 85%;
+    width: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  
+  .playlist-vid-body{
+height: 17%;
+margin: .5rem;
+display: flex;
+justify-content: space-evenly;
+
+}
+
+
+  .playlist_vid_thumbnails{
+    width: 30%;
+    height: 100%;
+border-radius: .7rem;
+  }
+
+  .playlist_vid_details{
+    
+    width: 68%;
+    height: 100%;
+    color: white;
+display: flex;
+flex-direction: column;
+  }
+
+  .playlist_vid_details_title{
+    
+    min-height: 60%;
+    overflow-wrap: break-word;
+}
+
+  .playlist_vid_details_channelName{
+    font-size: small;
+    color: silver;
+  }
+
+
+  .playList_name{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .playList_vid_number{
+    font-size: small;
+    color:silver;
+    font-weight: lighter;
+  }

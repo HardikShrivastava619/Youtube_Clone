@@ -1,0 +1,48 @@
+.studiosidebar2-main{
+    background-color: rgb(40, 40, 40);
+  border-right: 1px solid #fbfbfb08;  
+    width: 5vw;
+}
+
+.studiosidebar2-ul{
+  margin-top: 3vh;
+    max-width:100%;
+    font-size: 10px;
+    align-items: center;
+  
+}
+  
+.studioSidebar2-Profile-div{
+    background-color: aqua;
+    margin-top: 2vh;
+border-radius: 50%;
+color: aliceblue;
+padding: .4rem .8rem;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: large;
+margin-top: 2vh;
+justify-self: center;
+}
+
+.studioSidebar2-Profile-img{
+}
+
+.studiobar2-li{
+    margin-top: .8rem;
+    align-items: center;
+    min-width: 90%;
+    max-width: 100%;}
+
+.studiosidbar2icon{
+    font-size: 1.5rem;
+
+}
+
+
+.studiobar2-li:hover{
+    border: none;
+    border-radius: 1rem;
+    background-color:rgba(0, 0, 0, 0.149);
+  }

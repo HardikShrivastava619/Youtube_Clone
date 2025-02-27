@@ -1,0 +1,178 @@
+.ChooseAccount-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(30,31, 32);
+}
+
+.light_ChooseAccount-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+    background-color: white ;
+}
+
+.loading-bar {
+    height: .5%;
+    width: 30%; /* Size of the moving bar */
+    background-color: #17a2b8; /* Progress bar color (info color) */
+    animation: moveRight 2s linear infinite;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(-100%); /* Start outside on the left */
+    }
+    100% {
+        transform: translateX(100%); /* End outside on the right */
+    }
+}
+.container{
+    width: 75%;
+    height: 50%;
+    border-radius: 2rem;
+    background-color: rgb(14, 14, 14);
+    display: flex;
+}
+.google-passkey-container{
+width: 40%;
+height: 100%;
+color: white;
+padding: 1rem;
+cursor: pointer;
+}
+
+
+.img-container-btn{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container{
+    height: 80%;
+}
+ 
+.p-btn-container{
+align-self: flex-end;
+    display: flex;
+    justify-content: space-around;
+width: 50%;
+height: 12%;
+}
+
+.tryanother-para{
+margin-top: .5rem;
+color:  rgb(168, 199, 250);
+font-weight: 500;
+cursor: pointer;
+}
+
+.tryagain-continue-btn{
+    cursor: pointer;
+    color:  rgb(20, 60, 124);
+background-color: rgb(168, 199, 250);
+padding: .1em 1.5em;
+border-radius: 2rem;
+border: none;
+}
+
+.emailconfirm-email-first-latter{
+    border: none;
+    padding: .01vh .7vw;
+    text-decoration: none;
+    color: white;
+    margin-right: .3vw;
+    margin-left: .2vw;
+    border-radius: 50%;
+}
+
+.email-id-container{
+display: flex;
+border: 1px solid white;
+border-radius: 1rem;
+padding: .01rem 0vw 0vh  0vw ;
+width: 70%;
+text-decoration: none;
+color: white;
+}
+
+
+.modal-container{
+    position: absolute;
+    
+   border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 27%;
+    padding: 10px;
+}
+
+.Windows-Security{
+    display: flex;
+    width: 98%;
+    justify-content: space-between;
+}
+
+
+.loginModal-RxCross2{
+cursor: pointer;
+}
+
+.MdOutlineSecurity{
+    margin-right: 10px;
+}
+
+.para-small{
+    font-size: small;
+    width: 70%;
+    font-weight: 500;
+}
+.para-small2{
+    font-size: small;
+    width: 95%;
+    font-weight: 500;
+}
+.input-container{
+    display: flex;
+    width: 100%;
+align-items: center;
+}
+
+.pin-container{
+    width: 100%;
+    height: 80%;
+}
+.password-input{
+    width: 100%;
+height: 50%;
+
+}
+
+.RiKeyboardBoxFill{
+    font-size: 500%;
+    
+}
+
+.ok-cancel-btn-container{
+    width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+.ok-btn{
+    width: 48%;
+}
+
+.cancel-btn{
+    width: 48%;
+
+}

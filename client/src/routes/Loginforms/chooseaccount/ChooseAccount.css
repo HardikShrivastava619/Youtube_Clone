@@ -1,0 +1,252 @@
+.ChooseAccount-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+background-color: rgb(30,31, 32);
+}
+
+
+.light_ChooseAccount-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.loading-bar {
+    height: .4%;
+    width: 30%; /* Size of the moving bar */
+    background-color: #17a2b8; /* Progress bar color (info color) */
+    animation: moveRight 2s linear infinite;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(-100%); /* Start outside on the left */
+    }
+    100% {
+        transform: translateX(100%); /* End outside on the right */
+    }
+}
+
+.container{
+    width: 75%;
+    height: 50%;
+    border-radius: 2rem;
+    background-color: rgb(14, 14, 14);
+    display: flex;
+}
+
+.light_container{
+    width: 75%;
+    height: 50%;
+    border-radius: 2rem;
+    background-color: whitesmoke ;
+    display: flex;
+}
+
+
+.google-container{
+width: 50%;
+height: 100%;
+color: white;
+padding: 2rem;
+cursor: pointer;
+}
+
+.light_google-container{
+    width: 50%;
+    height: 100%;
+    color: black;
+    padding: 2rem;
+    cursor: pointer;
+    }
+
+.options-container-email{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+ 
+.choose-an-account{
+    margin-top: 4vh;
+}
+
+.previous-id-container{
+    border-bottom: 1px solid grey;
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    
+cursor: pointer;
+}
+
+
+.light_previous-id-container{
+    border-bottom: 1px solid grey;
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    
+cursor: pointer;
+}
+
+
+.profile-name-signed-0ut-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-out{
+    font-size: small;
+    color: silver;
+}
+
+.light_sign-out{
+    font-size: small;
+    color:black;
+}
+
+
+.previous-id-container:hover{
+    border-radius: 1rem;
+    background-color:rgba(169, 169, 169, 0.247);
+}
+
+
+.light_previous-id-container:hover{
+    border-radius: 1rem;
+    background-color: silver ;
+}
+
+.email-first-latter{
+    border: none;
+    background-color: aqua;
+    padding: .01vh 1vw;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.name-email-container{
+display: flex;
+margin-left: .5vw;
+flex-direction: column;
+width: 70%;
+}
+
+.profile-name{
+text-decoration: none;
+font-weight: 700;
+}
+
+
+.profile-email{
+text-decoration: none;
+color: silver;
+font-size: .7em;
+}
+
+
+.another-acc{
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid grey;
+    padding: 2.5vh 0vw 1vh 1.5vw;
+    display: flex;
+    width: 100%;
+    color: antiquewhite;
+    
+}
+
+.light_another-acc{
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid grey;
+    padding: 2.5vh 0vw 1vh 1.5vw;
+    display: flex;
+    width: 100%;
+    color: black;
+}
+
+
+.another-acc:hover{
+    border-radius: 1rem;
+    background-color:rgba(169, 169, 169, 0.247);
+}
+
+.light_another-acc:hover{
+    border-radius: 1rem;
+    background-color:silver;
+}
+
+.PiUserCircle{
+font-size: 1.8em;
+color: antiquewhite;
+margin-right: 1vw;
+}
+
+
+.light_PiUserCircle{
+    font-size: 1.8em;
+    color: black;
+    margin-right: 1vw;
+    }
+
+.remove-acc{
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid grey;
+    padding: 2.5vh 0vw 1vh 1.5vw;
+    display: flex;
+    width: 100%;
+    color: white;
+}
+
+.light_remove-acc{
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid grey;
+    padding: 2.5vh 0vw 1vh 1.5vw;
+    display: flex;
+    width: 100%;
+    color: black;
+}
+
+
+
+.remove-acc:hover{
+    border-radius: 1rem;
+    background-color:rgba(169, 169, 169, 0.247);
+}
+
+
+.light_remove-acc:hover{
+    border-radius: 1rem;
+    background-color:rgba(169, 169, 169, 0.247);
+}
+
+
+.MdOutlinePersonRemoveAlt1{
+font-size: 1.8em;
+color: white;
+margin-right: 1vw;
+}
+
+.light_MdOutlinePersonRemoveAlt1{
+    font-size: 1.8em;
+    color: black;
+    margin-right: 1vw;
+    }

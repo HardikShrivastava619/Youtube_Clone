@@ -1,0 +1,99 @@
+.dobform-inputs-container{
+    align-self: center;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+justify-content: space-evenly;
+}
+
+
+.dobform-dob-input-container{
+display: flex;
+justify-content: space-around;
+width: 100%;
+height: 30%;
+
+}
+
+.months-selecter{
+    width: 30%;
+    background-color: transparent;
+}
+
+
+.light_months-selecter{
+    width: 30%;
+    background-color: transparent;
+    color: white !important;
+}
+
+
+
+.dob-inputs::placeholder{
+    color: white !important ;
+}
+
+.month-selecter-options{
+    background-color: #2c2f33;
+    color: white;
+}
+
+.dob-inputs{
+width: 30%;
+background-color: transparent;
+color: white !important;
+}
+
+.day-inputs{
+    width: 30%;
+    background-color: transparent;
+}
+
+.dob-inputs:focus {
+    background-color: transparent; /* Make background transparent */
+  }
+
+.gender-input{
+    color: white;
+    width: 100%;
+    height: 95%;
+    background-color: transparent;
+}
+
+.gender-nput-container{
+    align-self: center;
+width: 96%;
+}
+
+.dobform-para{
+text-decoration: none;
+color: rgb(168, 199, 250);
+font-size: small;
+}
+
+.dobform-next-btn{
+    height: 5vh;
+    width: 5vw;
+    background-color:  rgb(168, 199, 250);
+border: none;
+border-radius: 2rem;
+align-self: self-end;
+position: relative;
+bottom: 4vh;
+right: 4vw;
+}
+
+
+input[type="number"] {
+    appearance: textfield; /* For most modern browsers */
+    -moz-appearance: textfield; /* For Firefox */
+    -webkit-appearance: none; /* For Safari and Chrome */
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Remove the arrows for WebKit browsers */
+    margin: 0; /* Adjust spacing */
+  }
+

@@ -1,0 +1,68 @@
+.subscription-page{
+    width:100vw;
+    height: 92vh;
+  display: flex;
+  flex-direction: column;
+  padding: 4vh 0vw 0vh 2vw;
+  overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #888 black;
+  
+  }
+  .subscribed-videos-container{
+  width:100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  }
+  
+  .subscribed_page_latest_heading{
+    font-weight: 900;
+    width: 10vw;
+    text-align: center;
+    color: white;
+  }
+  
+  
+  .subscribed-videos{
+  width: 30%;
+  height: 50%;
+  border-radius: 1rem;
+  text-decoration: none;
+  }
+  
+  
+  .video-Screen{
+    width: 100%;
+    border-radius: 1rem;
+    height: 62%;
+  }
+  
+  .subscribed-video-channel-container{
+    height: 18%;
+    margin-top: .5vh;
+    display: flex;
+    color: #f1f1f1;
+    font-size: .9em;
+  }
+  
+  .video-channel-name{
+    height: 70%;
+    width: 12%;
+    border-radius: 55%;
+  }
+  
+  .subscribed-video-views-container{
+    height: 15%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: .8em;
+    padding-left: 15%;
+   position: relative;
+   bottom: 2vh;
+   font-weight: 550;
+  }
+  

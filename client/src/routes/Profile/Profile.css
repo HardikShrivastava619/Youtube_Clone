@@ -1,0 +1,204 @@
+
+.profile-main-page{
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  
+  .profile-info-container{
+    height: 35%;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1f1f1;
+  }
+  
+  
+  .profile-img{
+    width: 30%;
+    height: 80%;
+    font-size: 8em;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .profile-img-firstlatter{
+    border-radius:20rem;
+    width: 30%;
+    height: 80%;
+    font-size: 8em;
+    background-color: rgba(0, 255, 255, 0.601);
+    display: flex;
+    padding: 2vh;
+    justify-content: center;
+  }
+  
+  
+  
+  .user-name{
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-info-container-btns{
+    padding: .5rem 1rem;
+    color: #f1f1f1;
+    border: none;
+  margin: .1rem;
+    background-color: #2c2f33;
+    border-radius: 5rem;
+  }
+  
+  
+  .profile-page-second-div{
+    height: 25%;
+    width: 58vw;
+    padding-left: 1vw;
+    position: relative;
+    left: 2vw;
+    border-radius: .5rem;
+    border: .1px solid silver;
+  }
+    
+  
+  .visiblity-info-container{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .mini-profile-img{
+    height: 8vh;
+    width: 4vw;
+    text-align: center;
+    padding: .5rem;
+    font-size: 1.3em;
+    color: #f1f1f1;
+    border-radius: 50%;
+  }
+  
+  
+  .profile-page-second-div-btn1{
+  background-color: #2c2f33;
+  color: grey;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  padding: .25rem .5rem;
+  border: none;
+  position: relative;
+  bottom: 1vh;
+  }
+  
+  .profile-page-second-div-btn2{
+  background-color: #2c2f33;
+  color: grey;border: none;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: .25rem 1.2rem;
+  position: relative;
+  bottom: 1vh;
+  }
+  
+  
+  
+  .profile_name{
+    font-weight: 900;
+  }
+  
+  
+  .profile_email{
+    margin-left: .5vw;
+  }
+  
+  .visiblity-info-name_div{
+    display: flex;
+    width: 30%;
+    align-items: center;
+
+  }
+
+  .visiblity-info-name-second-div{
+display: flex;
+justify-content: space-between;
+height: 25%;
+  }
+  
+  .visiblity-info-name-third-div{
+    display: flex;
+    color: white;
+    height: 100%;
+    width: 60%;
+    justify-content: space-between;
+  }
+  
+  .profil_publishPost-div{
+    position: relative;
+    left: 2vw;
+    width: 58vw;
+    height: 40%;
+
+  }
+  
+  .publish_scdule_div{
+    height: 20%;
+    border-bottom: 1px solid grey;
+    color: grey;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+}
+
+.published_heading{
+    position: relative;
+    top: 2.2vh;
+    width: 15%;
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+
+.pubLishePost_secondary_div{
+    color: white;
+    height: 75%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}  
+  
+  
+  .your_Channel_profile_noImg{
+    border-radius: 50%;
+    width: 95%;
+    font-size: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+background-color:  skyblue;
+}
+  
+  
+  
+  .your_Channel_profile{
+    border-radius: 50%;
+    width: 100%;
+  }
+  
+  
+  
+  .pencil-icon{
+    width: 4vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1f1f1;
+    border-radius: 55%;
+    background-color: #2c2f33;
+  }
+  

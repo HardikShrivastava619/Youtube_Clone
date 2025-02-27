@@ -1,0 +1,139 @@
+.content-vid-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: .5vh;
+}
+
+.content-vid_content-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.content-vid-container{
+    overflow-y: auto;
+    max-height:60vh ;
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+    min-height: 25vh;
+}
+
+.content-vid-body{
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+
+.dropdown-item-contvid{
+    color: white;
+width: 100%;
+text-decoration: none;
+}
+
+.dropdown-item-contvid:hover{
+    background-color: #343a40;
+
+}
+
+.contentvid-thumbnail-container{
+    width: 15%;
+    height: 90%;
+    margin-right:10vw ;
+}
+
+
+.content_vid_thumbnails{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.cont_vid_vid_details{
+    display: flex;
+    width: 65%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.con_vid_playList{
+width: 20%;
+display: flex;
+}
+
+.con_vid_playList_allow{
+    width: 15%;
+
+}
+
+.content-videos-headings{
+    text-decoration: none;
+    color: grey;
+width: 20%;
+
+}
+
+.content-videos-heading-container{
+    display: flex;
+    width: 67%;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.content-vid_videos-heading-container{
+
+width: 20%;
+text-align: center;
+}
+
+.btn-secondary{
+    margin-right: 3vw;
+    background-color: transparent  ;
+    
+}
+
+
+.delete_vid_toggle {
+    width: 35vw;
+    background-color:rgb(60,60,60) ;
+    color: white;
+    position: fixed; 
+    top: 35vh;
+    height: 35vh;
+    border-radius: 1rem;
+    padding: 3vh 1vw 0vh 1vw;
+    left: 40vw;
+    z-index: 2; 
+display: flex;
+flex-direction: column;
+justify-content: space-between;  
+}
+
+  .cacnel_toggle_container{
+cursor: pointer;
+width: 40%;
+align-self: end;
+display: flex;
+justify-content: space-between;
+}
+  
+  
+
+.cont_vid_three_dots{
+color: #fff; 
+background-color: #343a40;
+margin-bottom: 1.5vh;
+margin-right: 1vw;
+border:none;
+padding: 1vh .8vw;
+border-radius: 10px;    
+}
