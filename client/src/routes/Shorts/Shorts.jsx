@@ -5,7 +5,7 @@ import { RiShareForwardFill } from "react-icons/ri";
 import { RxDotsVertical } from "react-icons/rx";
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom';
-import './Shorts.css'
+import './shorts.css'
 
 
 const Shorts = () => {
