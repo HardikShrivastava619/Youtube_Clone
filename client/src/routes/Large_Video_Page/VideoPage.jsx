@@ -9,7 +9,7 @@ import { FiPlus } from "react-icons/fi";
 import { RxDotsVertical, RxCross1 } from "react-icons/rx";
 import { FaYoutube } from "react-icons/fa";
 import './VideoPage.css';
-import { VideoPageJS } from './VideoPage';
+import { VideoPageJS } from './VideoPage.js';
 import { SiYoutubeshorts } from "react-icons/si";
 
 
