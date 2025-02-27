@@ -2,8 +2,8 @@ import React from 'react'
 import { BiSolidVideos } from 'react-icons/bi'
 import { MdAnalytics, MdOutlineDashboard } from 'react-icons/md'
 import { Link } from 'react-router-dom'
-import './Studiosidebar2.css'
-
+import './studiosidebar2.css'
+ 
 const Studiosidebar2 = () => {
   return (
 <main className='studiosidebar2-main' >
