@@ -3,7 +3,7 @@ import shortModel from '../models/shortModel.js'
 import fs from 'fs'
 import path from 'path';
 import CommentsModel from "../models/CommentsModel.js";
-import userModel from "../models/UserModel.js"
+import userModel from "../models/userModel.js"
 
 
 

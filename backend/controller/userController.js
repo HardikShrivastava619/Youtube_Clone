@@ -1,6 +1,6 @@
 import { comparePassword, hashPassword } from "../helper/userHelper.js"
 import jwt from 'jsonwebtoken'
-import userModel from "../models/UserModel.js"
+import userModel from "../models/userModel.js"
 import { sendVerificationCode } from "../middelwares/Email.js"
 import mongoose from "mongoose"
 import videoModel from '../models/videoModel.js';
