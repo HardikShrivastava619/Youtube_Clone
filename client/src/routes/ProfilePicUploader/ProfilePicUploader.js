@@ -80,6 +80,7 @@ export const ProfilePicUploader = () => {
 
          } )
      const data = await res.json()
+console.log(data);
      
      
      dispatch(loginSliceAction.loginReducer(data))
