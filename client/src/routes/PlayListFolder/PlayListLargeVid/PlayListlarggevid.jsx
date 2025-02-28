@@ -19,7 +19,7 @@ const vidNum = playList?.videos?.findIndex((i)=> i === video?._id  )
 const handleGetViews = async () => {
   try {
       
-const res = await fetch(`http://localhost:1020/api/comments/getVideoviwes/${video?._id}`)
+const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/comments/getVideoviwes/${video?._id}`)
 const data = await  res.json()
 setViews(data?.views?.numberOfviews.length)
   } catch (error) {
@@ -31,7 +31,7 @@ setViews(data?.views?.numberOfviews.length)
 const handleVideoViews = async ()=>{
   try {
 const uid = loginData?.user?._id
-const res = await fetch(`http://localhost:1020/api/comments/setVideoviwes/${video?._id}`,{
+const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/comments/setVideoviwes/${video?._id}`,{
 method:"POST",
 headers:{
 'Content-Type':"application/json",
@@ -52,7 +52,7 @@ body:JSON.stringify({uid})
 
 const fetchVid = async () => {
   try {
-    const res = await fetch(`http://localhost:1020/api/users/playList_large_vid/${params?.uid}/${params?.pid} `)
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/playList_large_vid/${params?.uid}/${params?.pid} `)
     const data = await res.json()
     
     setVideo(data?.video)
@@ -70,7 +70,7 @@ const fetchOtherVideos = async () => {
 const uid = loginData?.user?._id
 
 
-    const res = await  fetch(`http://localhost:1020/api/users/playList_other_videos/${uid}/${params?.pid}`)
+    const res = await  fetch(`https://youtube-clone-v8xu.onrender.com/api/users/playList_other_videos/${uid}/${params?.pid}`)
 const data = await res.json()
 
 setOtherVideos(data?.user?.playlists[0]?.videos?.filter((v)=>v?._id !==  video?._id))

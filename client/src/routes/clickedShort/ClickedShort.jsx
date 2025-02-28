@@ -18,7 +18,7 @@ const ClickedShorts = () => {
 
   const getAllShorts = async () => {
     try {
-      const res = await fetch(`http://localhost:1020/api/shorts/get_all_shorts`);
+      const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/shorts/get_all_shorts`);
       const data = await res.json();
   
       
@@ -83,7 +83,7 @@ const ClickedShorts = () => {
     const { likes, disLikes } = short.comments.commentID;
 
     try {
-const res =       await fetch(`http://localhost:1020/api/comments/save_shorts_views/${shortId}/${userId}`, {
+const res =       await fetch(`https://youtube-clone-v8xu.onrender.com/api/comments/save_shorts_views/${shortId}/${userId}`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ const res =       await fetch(`http://localhost:1020/api/comments/save_shorts_vi
 
   const handleSubscribe = async (short) => {
     try {
-      const res = await fetch(`http://localhost:1020/api/users/subscribed_channel/${loginData?.user?._id}/${short?.channelName?._id}` ,{
+      const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/subscribed_channel/${loginData?.user?._id}/${short?.channelName?._id}` ,{
         method:"POST",
         headers:{
           'Content-Type' : 'application/json',
@@ -139,7 +139,7 @@ const saveShortHist = async () => {
 
 const sid = params.sid
 
-const res = await fetch(`http://localhost:1020/api/users/setShortHistory/${loginData?.user?._id}`,  {
+const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/setShortHistory/${loginData?.user?._id}`,  {
 method:"POST",
 headers:{
 'content-Type' : 'application/json'
@@ -160,7 +160,7 @@ const updateViews = async () => {
 
 
 
-    const res = await fetch(`http://localhost:1020/api/shorts/save_shorts_views/${loginData?.user?._id}/${sid} ` ,  {
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/shorts/save_shorts_views/${loginData?.user?._id}/${sid} ` ,  {
       method:'PUT',
       header:{
         'Content-Type' : 'application/json'
@@ -182,7 +182,7 @@ const [subscribedArr , setSubscribedArr] = useState([])
 
 const getSubscribedarray = async () => {
   try {
-    const res = await fetch(`http://localhost:1020/api/users/getUserSubscibedChannels/${loginData?.user?._id}`)
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/getUserSubscibedChannels/${loginData?.user?._id}`)
 const data = await res.json()
 setSubscribedArr(data?.usersSubscribedarray?.subscribedToChannels)
 } catch (error) {

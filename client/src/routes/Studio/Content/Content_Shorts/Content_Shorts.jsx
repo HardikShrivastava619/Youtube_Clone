@@ -23,7 +23,7 @@ const Content_Shorts = () => {
     
       const getVid = async () => {
         try {
-            const res =   await fetch(`http://localhost:1020/api/shorts/getuploadedShorts_sid/${loginData?.user?._id}`)
+            const res =   await fetch(`https://youtube-clone-v8xu.onrender.com/api/shorts/getuploadedShorts_sid/${loginData?.user?._id}`)
             const data = await res.json()
             setVid(data?.shorts)
     console.log(data);
@@ -42,7 +42,7 @@ const Content_Shorts = () => {
         const sid = selectedVid?._id
     console.log(vid)
     
-      const res = await fetch(`http://localhost:1020/api/shorts/delete_selected_short/${sid}` , {
+      const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/shorts/delete_selected_short/${sid}` , {
         method:"DELETE"
       } )
       const  data  = await res.json()

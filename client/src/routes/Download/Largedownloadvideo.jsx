@@ -32,7 +32,7 @@ const [showOtherVideos , setShowOtherVId] = useState(true)
        
        const handleGetAllDonwloadedVideos = async () => {
         try {
-          const res = await fetch(`http://localhost:1020/api/users/getDownloadedVidlarge/${loginData?.user?._id}/${params?.vid} `)
+          const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/getDownloadedVidlarge/${loginData?.user?._id}/${params?.vid} `)
 const data = await res.json()
 const indx = data?.userInfo?.Downloads?.findIndex(v=> v?._id === params?.vid)
 setLargeVideo(data?.userInfo?.Downloads[indx])

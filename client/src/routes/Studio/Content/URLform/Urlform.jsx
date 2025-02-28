@@ -25,7 +25,7 @@ const handleNext = async (e) => {
     }
 
     try {
-        const res = await fetch(`http://localhost:1020/api/users/verify/${params.email}`, {
+        const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/verify/${params.email}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

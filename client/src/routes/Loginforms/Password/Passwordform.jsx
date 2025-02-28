@@ -23,7 +23,7 @@ const Passwordform = () => {
         try {
             const password = passwordRef?.current?.value;
       
-            const res = await fetch(`http://localhost:1020/api/users/login/${params?.email}`, {
+            const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/login/${params?.email}`, {
                 method: "POST",
                 headers: {
                     'Content-Type': "application/json"
@@ -72,7 +72,7 @@ if (password !== passSecond) {
 return    alert('Passwords do not match')
 }
 
-const res = await fetch(`http://localhost:1020/api/users/reset_password/${params?.email}` , {
+const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/reset_password/${params?.email}` , {
     method:"PUT",
     headers:{
         'Content-Type':'application/json'

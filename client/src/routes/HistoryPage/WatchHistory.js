@@ -23,7 +23,7 @@ const handleDeleteHist = async () => {
 
 
     try {  
-        const res = await fetch(`http://localhost:1020/api/users/removeHistory/${loginData?.user?._id}`,{
+        const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/removeHistory/${loginData?.user?._id}`,{
             method:"POST",
             headers:{
                 'Content-Type':"application/json"
@@ -40,7 +40,7 @@ const handleDeleteHist = async () => {
 
  const gethistVid = async () => {
  try {
- const res   =  await fetch(`http://localhost:1020/api/users/getVideoHistory/${loginData?.user?._id}`)
+ const res   =  await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/getVideoHistory/${loginData?.user?._id}`)
  const data  =  await res.json()
  setVidHist(data?.user?.history?.videoHistory)
  
@@ -52,7 +52,7 @@ const handleDeleteHist = async () => {
 
  const usersShortsHistory = async () => {
     try {
-        const res = await fetch(`http://localhost:1020/api/users/getShortHistory/${loginData?.user?._id}`)
+        const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/getShortHistory/${loginData?.user?._id}`)
 const data = await res.json()
 
 
@@ -113,7 +113,7 @@ const handleDleltevideo = async (v)=>{
 
         const vid = v?._id
         
-        const res = await fetch(`http://localhost:1020/api/users/setDletedVideoHist/${loginData?.user?._id}`, {
+        const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/setDletedVideoHist/${loginData?.user?._id}`, {
 method:'PUT',
 headers:{
 'Content-Type' : 'application/json'
@@ -143,7 +143,7 @@ const handleDlelteshort = async (s)=>{
 
         const sid = s?._id
         
-        const res = await fetch(`http://localhost:1020/api/users/setDletedShortHist/${loginData?.user?._id}`, {
+        const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/setDletedShortHist/${loginData?.user?._id}`, {
 method:'PUT',
 headers:{
 'Content-Type' : 'application/json'

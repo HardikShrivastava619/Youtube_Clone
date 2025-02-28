@@ -20,7 +20,7 @@ const handleDelete = async (m) => {
 
     const uid = loginData?.user?._id
     
-const res = await fetch(`http://localhost:1020/api/users/deletePlayList/${m?._id}`, {
+const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/deletePlayList/${m?._id}`, {
   method:"POST",
   headers:{
     'Content-Type':"application/json"
@@ -43,7 +43,7 @@ console.log(error);
 
   const handlegetPlayList = async () => {
     try {
-      const res = await fetch(`http://localhost:1020/api/users/get_playList/${loginData?.user?._id}`)
+      const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/get_playList/${loginData?.user?._id}`)
       const data = await res.json()
       const parr = data?.playlist?.playlists.filter((v)=>  v?.videos?.length !== 0   )   
 

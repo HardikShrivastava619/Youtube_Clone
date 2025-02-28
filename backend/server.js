@@ -25,7 +25,7 @@ const app = express();
                                                                     
 // Middleware
 app.use(cors({ 
-  origin: ['http://localhost:5173', 'http://localhost:1020'],  
+  origin: "https://youtube-clone-v8xu.onrender.com ",  
   methods: "GET,POST,PUT,DELETE",       
   credentials: true                                             
 }));

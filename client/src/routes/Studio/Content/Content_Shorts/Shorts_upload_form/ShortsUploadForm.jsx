@@ -139,7 +139,7 @@ videoData.append('shortFile',shortFile)
 }else(
 videoData.append('shortUrl',shortUrl)
 )
-const res = await fetch (`http://localhost:1020/api/shorts/upload_shorts/${logiData?.user?._id}` , {
+const res = await fetch (`https://youtube-clone-v8xu.onrender.com/api/shorts/upload_shorts/${logiData?.user?._id}` , {
 method:"POST",
 body:videoData
 })

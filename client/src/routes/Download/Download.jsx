@@ -15,7 +15,7 @@ const [downloadVid , SetDownloadVid] = useState([])
 
 const handleGetDownloadVideos = async () => {
   try {
-    const res = await fetch(`http://localhost:1020/api/users/getDownloadedVid/${loginData?.user?._id}`)
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/getDownloadedVid/${loginData?.user?._id}`)
 const data = await res.json()
 
 SetDownloadVid(data?.user?.Downloads)
@@ -50,7 +50,7 @@ function calculateDaysPassed(date) {
 
 
 
-     const res = await fetch(`http://localhost:1020/api/users/deleteDownload_video/${loginData?.user?._id}/${vid}`,{
+     const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/deleteDownload_video/${loginData?.user?._id}/${vid}`,{
       method:"PUT",
       headers:{
         "Content-Type": 'apllication/json'

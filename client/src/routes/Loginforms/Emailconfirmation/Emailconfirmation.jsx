@@ -33,7 +33,7 @@ const handleOK = async () => {
 const password= passwordRef.current.value
 console.log(password);
 
-    const res = await fetch (`http://localhost:1020/api/users/login/${params.email}`,{
+    const res = await fetch (`https://youtube-clone-v8xu.onrender.com/api/users/login/${params.email}`,{
       method:"POST",
       headers:{
         'Content-Type' : 'application/json'

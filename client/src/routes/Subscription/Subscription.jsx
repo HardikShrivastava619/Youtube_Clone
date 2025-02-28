@@ -13,7 +13,7 @@ const [subscribedChannels ,setSubscribedChannels ] = useState([])
   
   const getSubscribedChannels = async () => {
     try {
-      const res = await fetch(`http://localhost:1020/api/users/get_subscribed_channels/${loginData?.user?._id}`)  
+      const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/get_subscribed_channels/${loginData?.user?._id}`)  
       const data = await res.json()
       
       setSubscribedChannels(data?.subscribeChannels?.subscribedToChannels )

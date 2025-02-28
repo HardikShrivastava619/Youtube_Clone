@@ -42,7 +42,7 @@ const [views,setViews] = useState()
 
 const handleSubscribe = async () => {
   try {
-    const res = await fetch(`http://localhost:1020/api/users/subscribed_channel/${loginData?.user?._id}/${video?.channelName?._id}` ,{
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/subscribed_channel/${loginData?.user?._id}/${video?.channelName?._id}` ,{
       method:"POST",
       headers:{
         'Content-Type' : 'application/json',
@@ -72,7 +72,7 @@ if (channelSubscribedOrNot) {
 const handleGetViews = async () => {
   try {
     const vid = video?._id
-    const res = await fetch(`http://localhost:1020/api/comments/getVideoviwes/${vid}`)
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/comments/getVideoviwes/${vid}`)
      const data = await  res.json()
 
 setViews(data?.views?.numberOfviews.length)
@@ -97,7 +97,7 @@ const handleHorizontalDots = ()=>{
 const getVideoDetails = async () => {
   try {
     const vid = video?._id
-    const res = await fetch(`http://localhost:1020/api/comments/getVideoDetails/${vid} `) 
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/comments/getVideoDetails/${vid} `) 
     const data = await res.json()
     setvideoDetails(data?.videoDetails)
     setLikes(data?.videoDetails?.likes || []); // Update likes
@@ -169,7 +169,7 @@ if (videoDetails !== undefined) {
   const vid = video?._id
   const uid = loginData?.user?._id;
 
-  const res = await fetch(`http://localhost:1020/api/comments/save_shorts_views/${vid}/${uid}`, {
+  const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/comments/save_shorts_views/${vid}/${uid}`, {
     method: "POST",
     headers: {
       'Content-Type': "application/json",
@@ -241,7 +241,7 @@ const days = calculateDaysPassed();
 
 const handleWatchLater = async () => {
   try {
-    const res = await fetch(`http://localhost:1020/api/users/get_WatchLater_vid/${loginData?.user?._id}`)
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/get_WatchLater_vid/${loginData?.user?._id}`)
     const data = await res.json()
      ;
  
@@ -259,7 +259,7 @@ const histVideo =  async () => {
   try {
 
     const vid = video?._id
-    const res = await fetch (`http://localhost:1020/api/users/setVideoHistory/${loginData?.user?._id}` , {
+    const res = await fetch (`https://youtube-clone-v8xu.onrender.com/api/users/setVideoHistory/${loginData?.user?._id}` , {
       method : 'POST',
       headers :{
         'Content-Type' :  'application/json'
@@ -290,7 +290,7 @@ const pasueData = useSelector(s=>s.PauseData)
 
 const handleAddToPlayList = async () => {
   try {
-    const res = await fetch(`http://localhost:1020/api/users/get_playList/${loginData?.user?._id}`)
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/get_playList/${loginData?.user?._id}`)
     const data = await res.json()
 
 
@@ -309,7 +309,7 @@ const handleSaveVideoinPlayList = async () => {
   try {
 const vid = video?._id
 
-    const res = await fetch (`http://localhost:1020/api/users/save_vid_in_playList/${loginData?.user?._id}`, {
+    const res = await fetch (`https://youtube-clone-v8xu.onrender.com/api/users/save_vid_in_playList/${loginData?.user?._id}`, {
       method:"POST",
       headers:{
         'Content-Type':"application/json"
@@ -350,7 +350,7 @@ return alert('please write a comment first')
 
 const commentText = CommentsRef?.current?.value 
 
-const res = await fetch(`http://localhost:1020/api/comments/setComment/${video?._id}/${loginData?.user?._id}` , {
+const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/comments/setComment/${video?._id}/${loginData?.user?._id}` , {
 method:"POST",
 headers:{
   'Content-Type' : 'application/json',
@@ -371,7 +371,7 @@ console.log(error);
 
 const getUser = async () => {
   try {
-const res = await fetch(`http://localhost:1020/api/users/find_user/${loginData?.user?._id}`)
+const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/find_user/${loginData?.user?._id}`)
 const data = await res.json() 
 setSubscribedArray(data?.user?.subscribedToChannels)
 
@@ -401,7 +401,7 @@ const handleCreatePlaylist = async () => {
 const name = nameRef?.current?.value;
 
 const uid = loginData?.user?._id
-    const res = await fetch(`http://localhost:1020/api/users/create_playList/${uid}`,{
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/create_playList/${uid}`,{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
@@ -423,7 +423,7 @@ setShowModal(false)
 
 const save_vid_in_watchLater = async () => {
   try {
-    const res = await fetch(`http://localhost:1020/api/users/send_vid_for_watchLater/${loginData?.user?._id}/${video?._id}`,{
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/send_vid_for_watchLater/${loginData?.user?._id}/${video?._id}`,{
       method:"PUT",
       headers:{
         "Content-Type":'application/json'
@@ -440,7 +440,7 @@ await get_vid_from_watchLater()
 }
 const get_vid_from_watchLater = async () => {
   try {
-    const res = await fetch(`http://localhost:1020/api/users/get_vid_for_watchLater/${loginData?.user?._id}`)
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/get_vid_for_watchLater/${loginData?.user?._id}`)
 const data = await res.json()
 
 

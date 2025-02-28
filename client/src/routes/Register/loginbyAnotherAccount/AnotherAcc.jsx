@@ -40,7 +40,7 @@ const gender = params.gender
 const email  = emailref.current.value
 
 
-const res = await fetch("http://localhost:1020/api/users/register" ,  {
+const res = await fetch("https://youtube-clone-v8xu.onrender.com/api/users/register" ,  {
 method:"POST",
 headers:{
   "Content-Type": "application/json"

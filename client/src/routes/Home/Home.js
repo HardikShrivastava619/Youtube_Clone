@@ -33,7 +33,7 @@ export const HomeJS = ()=>{
   
   const getVideos = async () => {
     try {
-  const res = await fetch(`http://localhost:1020/api/videos/getVideos/${category}`)
+  const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/videos/getVideos/${category}`)
   const data = await res.json()
   setvideoDetails(data.videos)
   
@@ -51,7 +51,7 @@ getVideos()
   
   const save_uploaded_Videos = async () => {
     try {
-      const res = await fetch (`http://localhost:1020/api/users/updateuploaded_videos/${loginData?.user?._id}` , {
+      const res = await fetch (`https://youtube-clone-v8xu.onrender.com/api/users/updateuploaded_videos/${loginData?.user?._id}` , {
         method:'PUT',
   headers:{
     'Content-Type':'application/json'
@@ -69,7 +69,7 @@ getVideos()
   
   const getShorts = async () => {
     try {
-      const res = await fetch(`http://localhost:1020/api/shorts/get_all_shorts`)
+      const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/shorts/get_all_shorts`)
       const data = await res.json()
       setshortsDetails(data?.shorts)
   
@@ -128,7 +128,7 @@ getVideos()
 
   const handleWatchLater = async () => {
     try {
-      const res = await fetch(`http://localhost:1020/api/users/get_WatchLater_vid/${loginData?.user?._id}  `)
+      const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/get_WatchLater_vid/${loginData?.user?._id}  `)
       const data = await res.json()
   
   setWatchLaterShorts(data?.getWatchLater?.WatchLater?.shorts)
@@ -150,7 +150,7 @@ getVideos()
   
       
   
-      const res = await fetch(`http://localhost:1020/api/users/save_WatchLater_short/${loginData?.user?._id}/${sid}`,{
+      const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/save_WatchLater_short/${loginData?.user?._id}/${sid}`,{
         method:"PUT",
         headers:{
           'Content-Type':"application/json"
@@ -159,7 +159,7 @@ getVideos()
       })
       const data = await res.json()
       handleWatchLater()
-      } catch (error) {
+      } catch (error)  { 
       console.log(error);
   }}
   

@@ -29,7 +29,7 @@ const days = calculateDaysPassed();
 
 const handleWatchLater = async () => {
   try {
-    const res = await fetch(`http://localhost:1020/api/users/get_WatchLater_vid/${loginData?.user?._id}  `)
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/get_WatchLater_vid/${loginData?.user?._id}  `)
     const data = await res.json()
     
     
@@ -53,7 +53,7 @@ if (type==='All') {
 
 const handlesaveshortWatchLater = async (sid) => {
   try {
-    const res = await fetch(`http://localhost:1020/api/users/save_WatchLater_short/${loginData?.user?._id}/${sid}`,{
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/save_WatchLater_short/${loginData?.user?._id}/${sid}`,{
       method:"PUT",
       headers:{
         'Content-Type':"application/json"
@@ -72,7 +72,7 @@ const handlesaveshortWatchLater = async (sid) => {
 
 const remove_vid_in_watchLater = async (vid) =>{
   try {
-    const res = await fetch(`http://localhost:1020/api/users/send_vid_for_watchLater/${loginData?.user?._id}/${vid}`,{
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/send_vid_for_watchLater/${loginData?.user?._id}/${vid}`,{
       method:"PUT",
       headers:{
         "Content-Type":'application/json'

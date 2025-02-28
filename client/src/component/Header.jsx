@@ -55,7 +55,7 @@ const handleMenu = ()=>{
 
 const getUser = async () => {
   try {
-    const res = await fetch(`http://localhost:1020/api/users/find_user/${loginData?.user?._id}`)
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/find_user/${loginData?.user?._id}`)
     const data = await res.json()
 
 setUser(data?.user)
@@ -91,7 +91,7 @@ const handleSearch = async (e) => {
   try {
     e.preventDefault()
     
-    const res = await fetch(`http://localhost:1020/api/users/getSearchedVid/${searchedData?.keyWord}`)
+    const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/getSearchedVid/${searchedData?.keyWord}`)
     const data = await res.json()
     console.log(data);
     if (data?.succcess) {

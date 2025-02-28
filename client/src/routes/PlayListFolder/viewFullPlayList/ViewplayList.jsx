@@ -18,7 +18,7 @@ const [removeunnav_heading , setRemoveunnav_heading]  = useState(false)
   const fetchOtherVideos = async () => {
     try {
       const uid = loginData?.user?._id;
-      const res = await fetch(`http://localhost:1020/api/users/playList_other_videos/${uid}/${params?.pid}`);
+      const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/playList_other_videos/${uid}/${params?.pid}`);
       const data = await res.json();
       setPlayList(data?.user?.playlists[0]);
     } catch (error) {
@@ -29,7 +29,7 @@ const [removeunnav_heading , setRemoveunnav_heading]  = useState(false)
 
   const getLoginUser = async () => {
     try {
-      const userRes = await fetch(`http://localhost:1020/api/users/find_user/${loginData?.user?._id}`);
+      const userRes = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/find_user/${loginData?.user?._id}`);
       const dataSecond = await userRes.json();
       setUser(dataSecond?.user);
     

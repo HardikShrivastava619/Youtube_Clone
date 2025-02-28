@@ -43,7 +43,7 @@ const password= passwordRef.current.value
 if (!password) {
   return alert("please enter password")
 }
-const res = await fetch(`http://localhost:1020/api/users/register_password/${params.email}`,{
+const res = await fetch(`https://youtube-clone-v8xu.onrender.com/api/users/register_password/${params.email}`,{
   method:"POST",
   headers:{
     'Content-Type' : 'application/json'
