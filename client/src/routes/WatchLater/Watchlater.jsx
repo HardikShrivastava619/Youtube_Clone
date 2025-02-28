@@ -32,7 +32,7 @@ const {type,handleWatchLater,handlesaveshortWatchLater, navigate,bgi , setType,l
 <button  className='dots-watchlater-vid' > ⁝ </button>
 </div>
 <div  className='d-flex payallshuuflebtn' > 
-    <button className=' palyallbtn ' onClick={()=>{navigate(`/youtube.com/WatchlaterplayAll/${watchLater?.videos[0]?._id}`)}} > Play all  </button> 
+    <button className=' palyallbtn ' onClick={()=>{navigate(`/WatchlaterplayAll/${watchLater?.videos[0]?._id}`)}} > Play all  </button> 
 <button className='shufflebtn' > Shuffle </button>
 </div>
 <div>  </div>
@@ -56,7 +56,7 @@ const {type,handleWatchLater,handlesaveshortWatchLater, navigate,bgi , setType,l
 </div>
 
 { type === 'All' ?  ( <> <div  className='all-vid-container'>
- {  watchLater?.videos?.length === 0 &&  watchLater?.shorts?.length  === 0     ? <div   className='no_WatchLater_text_container' >  <img src="/youtube_img/oops.jpg"  className='no_Watchlater_img'  alt="" /> <h5  className='no_WatchLater_text' > Nothing to WatchLater </h5> </div> : watchLater?.videos?.map((v)=>  <Link to={`/youtube.com/video/${v._id}`}   className='all-vid'>
+ {  watchLater?.videos?.length === 0 &&  watchLater?.shorts?.length  === 0     ? <div   className='no_WatchLater_text_container' >  <img src="/youtube_img/oops.jpg"  className='no_Watchlater_img'  alt="" /> <h5  className='no_WatchLater_text' > Nothing to WatchLater </h5> </div> : watchLater?.videos?.map((v)=>  <Link to={`/video/${v._id}`}   className='all-vid'>
 <img src= {v?.thumbnail?.split('..\\client\\public').join('..\\..\\')   }       alt="" className='vid-screen' />
 <div style={{ width:"78%",height:"100%" ,paddingLeft:".5vw" }}  className='' > 
   <p className='text-white' >  { v?.title.substring(0,110)}...  </p>
@@ -74,7 +74,7 @@ const {type,handleWatchLater,handlesaveshortWatchLater, navigate,bgi , setType,l
    </div>
    </div>
    </Link> ) }
-   {watchLater?.shorts?.map((v)=>  <Link to={`/youtube.com/shorts/${v._id}`}   className='all-vid'>
+   {watchLater?.shorts?.map((v)=>  <Link to={`/shorts/${v._id}`}   className='all-vid'>
 <img src= {v?.thumbnail?.split('..\\client\\public').join('..\\..\\')   }       alt="" className='vid-screen' />
 <div style={{ width:"78%",height:"100%" ,paddingLeft:".5vw" }}  className='' > 
  <p className='text-white' >  { v?.title.substring(0,110)}...  </p>
@@ -95,7 +95,7 @@ const {type,handleWatchLater,handlesaveshortWatchLater, navigate,bgi , setType,l
 
 
 </>) : type === 'videos' ?  <div  className='all-vid-container'>
- {     watchLater?.videos?.length === 0     ?    <div   className='no_WatchLater_text_container' >  <img src="/youtube_img/oops.jpg"  className='no_Watchlater_img'  alt="" /> <h5  className='no_WatchLater_text' > Nothing to WatchLater </h5> </div>    :      watchLater?.videos?.map((v)=>  <Link to={`/youtube.com/video/${v._id}`}   className='all-vid'>
+ {     watchLater?.videos?.length === 0     ?    <div   className='no_WatchLater_text_container' >  <img src="/youtube_img/oops.jpg"  className='no_Watchlater_img'  alt="" /> <h5  className='no_WatchLater_text' > Nothing to WatchLater </h5> </div>    :      watchLater?.videos?.map((v)=>  <Link to={`/video/${v._id}`}   className='all-vid'>
 <img src= {v?.thumbnail?.split('..\\client\\public').join('..\\..\\')   }       alt="" className='vid-screen' />
 <div style={{ width:"78%",height:"100%" ,paddingLeft:".5vw" }}  className='' > 
   <p className='text-white' >  { v?.title.substring(0,110)}...  </p>
@@ -115,7 +115,7 @@ const {type,handleWatchLater,handlesaveshortWatchLater, navigate,bgi , setType,l
  
 </div>
 :<div  className='all-vid-container'>
-{   watchLater?.shorts?.length === 0     ?    <div   className='no_WatchLater_text_container' >  <img src="/youtube_img/oops.jpg"  className='no_Watchlater_img'  alt="" /> <h5  className='no_WatchLater_text' > Nothing to WatchLater </h5> </div>    :         watchLater?.shorts?.map((v)=>  <Link to={`/youtube.com/shorts/${v._id}`}   className='all-vid'>
+{   watchLater?.shorts?.length === 0     ?    <div   className='no_WatchLater_text_container' >  <img src="/youtube_img/oops.jpg"  className='no_Watchlater_img'  alt="" /> <h5  className='no_WatchLater_text' > Nothing to WatchLater </h5> </div>    :         watchLater?.shorts?.map((v)=>  <Link to={`/shorts/${v._id}`}   className='all-vid'>
 <img src= {v?.thumbnail?.split('..\\client\\public').join('..\\..\\')   }       alt="" className='vid-screen' />
 <div style={{ width:"78%",height:"100%" ,paddingLeft:".5vw" }}  className='' > 
  <p className='text-white' >  { v?.title.substring(0,110)}...  </p>

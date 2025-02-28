@@ -22,6 +22,7 @@ const loginSlice = createSlice({
     logOutReducer: (state, action) => {
       
       localStorage.removeItem("utubeloginuser");
+console.log(action.payload);
 
   
       return { user: null, token: "" };

@@ -45,7 +45,7 @@ return (
   <div     className= 'video-Conatiner'    >  
   {       videoDetails?.length === 0     ?   <div className='no_vid_found_div' >  <img  className='home_nvf_img' src="/youtube_img/oops.jpg" alt="no_img_found" />
     <h5 className='home_nvf_img_text' > oop's no match found </h5></div>              :
-   videoDetails?.map((v , i)=>  i < 9 ?  <Link to={`/youtube.com/video/${v._id}`}   key={i}   className='videos-div'      >
+   videoDetails?.map((v , i)=>  i < 9 ?  <Link to={`/video/${v._id}`}   key={i}   className='videos-div'      >
   <img src={v?.thumbnail?.split('..\\client\\public').join('..\\..\\') } alt=""  className='home-thumbnail'  />
   <div  className= 'homepage-videos-info-container'   >
   <div  className='vid-info-Container-home'    >
@@ -71,7 +71,7 @@ return (
   </div>
 
 <div className= 'shorts_div_home'   >
-{/**/  shortsDetails?.map((s)=>  <Link   to={`/youtube.com/shorts/${s?._id}`}  className='home_page_shorts'   >  
+{/**/  shortsDetails?.map((s,i  )=>  <Link key={i}  to={`/shorts/${s?._id}`}  className='home_page_shorts'   >  
 <img src={s?.thumbnail?.split('..\\client\\public').join('..\\..\\')  } alt="thumbnail not found"  className=  'shorts_thumnbnail_home_page'      />  
 <div  className='shorts_detail_container'  >  
 <p className=   'Shorts_description_home'   >{s?.description?.substring(0,30) }   </p>
@@ -102,7 +102,7 @@ return (
 
 
 <div     className='video-Conatiner'>  
-{videoDetails?.map((v , i)=>  i >= 9 ?  <Link to={`/youtube.com/video/${v._id}`}   key={i}   className= 'videos-div'      >
+{videoDetails?.map((v , i)=>  i >= 9 ?  <Link to={`/video/${v._id}`}   key={i}   className= 'videos-div'      >
   <img src={v.thumbnail.split('..\\client\\public').join('..\\..\\') } alt=""  className=  'home-thumbnail'   />
   <div  className=  'homepage-videos-info-container'   >
   <div  className='vid-info-Container-home'     >

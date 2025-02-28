@@ -87,7 +87,7 @@ import { useSelector } from 'react-redux';
       
 
 setTimeout(() => {
-  navigate(`/youtube.com/AnotherAcc/${params.name}/${DOB}/${gender}`)
+  navigate(`/AnotherAcc/${params.name}/${DOB}/${gender}`)
 }, 3000)
 } catch (error) {
   console.log(error);

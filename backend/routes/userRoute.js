@@ -62,8 +62,8 @@ router.post("/verify/:email" , verifyController )
 
 router.post("/updateprofile/:uid/:token"  ,  requireSignIn,upload.fields([{name:"profilePicture", maxCount:1 }])  , updateUserController )
 
-router.get("/getUserprofilePhoto/:email"    , getuserProfilePicController )
 
+router.get("/getUserprofilePhoto/:email"    , getuserProfilePicController )
 router.get("/getUserSubscibedChannels/:uid"    , getuserSubscribedController )
 
 router.post('/setVideoHistory/:uid', setVideoHistoryController    )
@@ -87,6 +87,21 @@ router.get("/get_playList/:uid",  getPlaylistController )
 router.post("/save_vid_in_playList/:uid",  saveVidInPlaylistController )
 
 router.get("/playList_large_vid/:uid/:pid",  largeVidPlaylistController )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 router.get("/playList_other_videos/:uid/:pid",  otherVidPlaylistController )
 
@@ -118,7 +133,6 @@ router.put('/remove_video_likedVid/:uid/:vid' ,  removeLikedVideosController )
 
 router.put('/download_video/:uid/:vid' ,  downloadVideosController )
 
-router.put('/download_video/:uid/:vid' ,  downloadVideosController )
 
 router.put('/deleteDownload_video/:uid/:vid' ,  deleteDownloadVideosController )
 

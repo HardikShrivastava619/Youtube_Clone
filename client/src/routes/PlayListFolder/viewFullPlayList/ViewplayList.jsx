@@ -18,7 +18,7 @@ const [removeunnav_heading , setRemoveunnav_heading]  = useState(false)
   const fetchOtherVideos = async () => {
     try {
       const uid = loginData?.user?._id;
-      const res = await fetch(`http://localhost:1020/playList_other_videos/${uid}/${params?.pid}`);
+      const res = await fetch(`http://localhost:1020/api/users/playList_other_videos/${uid}/${params?.pid}`);
       const data = await res.json();
       setPlayList(data?.user?.playlists[0]);
     } catch (error) {
@@ -29,7 +29,7 @@ const [removeunnav_heading , setRemoveunnav_heading]  = useState(false)
 
   const getLoginUser = async () => {
     try {
-      const userRes = await fetch(`http://localhost:1020/find_user/${loginData?.user?._id}`);
+      const userRes = await fetch(`http://localhost:1020/api/users/find_user/${loginData?.user?._id}`);
       const dataSecond = await userRes.json();
       setUser(dataSecond?.user);
     
@@ -86,7 +86,7 @@ useEffect(()=>{
         </div>
         <div className='all-vid-container'>
           {playList?.videos?.map((v,i ) => (
-            <Link className='all-vid' key={i} to={`/youtube.com/video/${v._id}`}  >
+            <Link className='all-vid' key={i} to={`/video/${v._id}`}  >
               <img src={v?.thumbnail?.split('..\\client\\public').join('..\\..\\')  } alt="not_uploaded" className='vid-screen' />
               <div style={{ width: "78%", height: "100%", paddingLeft: ".5vw" }}>
                 <p className='text-white'  style={{height:"60%"  }} >  {v?.title} </p>

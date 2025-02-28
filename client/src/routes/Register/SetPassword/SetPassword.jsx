@@ -43,7 +43,7 @@ const password= passwordRef.current.value
 if (!password) {
   return alert("please enter password")
 }
-const res = await fetch(`http://localhost:1020/register_password/${params.email}`,{
+const res = await fetch(`http://localhost:1020/api/users/register_password/${params.email}`,{
   method:"POST",
   headers:{
     'Content-Type' : 'application/json'
@@ -54,7 +54,7 @@ const data = await res.json()
 alert(data?.message)
 
 if (data?.success === true ) {
- navigate('/youtube.com/Signinform')
+ navigate('/Signinform')
 }else if (!data?.success) {
 alert( data?.message )  
 }
@@ -98,8 +98,8 @@ const firstlatter = params.email[0].toUpperCase()
     <div  className='container'  > 
     <div  className='setpassword-container'   > <h1> <FcGoogle onClick={handleLoading} /> </h1>
     <h2  className='choose-an-account' > Set your Password </h2> 
-    <Link   to="/youtube.com/ChooseAccount" className='setpassword-email-id-container'  > 
-    <Link    to="/youtube.com/ChooseAccount" className='setpassword-email-first-latter'  onClick={handleLoading} > {firstlatter} </Link> {params.email} 
+    <Link   to="/ChooseAccount" className='setpassword-email-id-container'  > 
+    <Link    to="/ChooseAccount" className='setpassword-email-first-latter'  onClick={handleLoading} > {firstlatter} </Link> {params.email} 
     </Link>
     
     

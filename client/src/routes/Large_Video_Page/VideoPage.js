@@ -37,7 +37,7 @@ const currMode = useSelector(s=>s.modeData)
 const handleDownload = async (vid) => {
   try {
 
-    const res = await fetch(`http://localhost:1020/download_video/${loginData?.user?._id}/${vid}`, {
+    const res = await fetch(`http://localhost:1020/api/users/download_video/${loginData?.user?._id}/${vid}`, {
       method:'PUT',
       headers:{
         'Content-Type' : 'application/json'
@@ -46,7 +46,6 @@ const handleDownload = async (vid) => {
      
      const data = await res.json()
 
-    console.log(data);
     
 if (data?.success) {
   setDownloadtoStart(true)
@@ -69,7 +68,7 @@ return setTimeout(()=>{
 
     const addVideosInUserLikedVid = async (vid) => {
       try {
-        const res = await fetch(`http://localhost:1020/set_likedVid/${loginData?.user?._id}/${vid}` , {
+        const res = await fetch(`http://localhost:1020/api/users/set_likedVid/${loginData?.user?._id}/${vid}` , {
 method:"PUT",
 headers:{
   'Content-Type' : 'application/json'
@@ -87,7 +86,7 @@ const data = await res.json()
   
     const romoveVideosInUserLikedVid = async (vid) => {
       try {
-        const res = await fetch(`http://localhost:1020/remove_video_likedVid/${loginData?.user?._id}/${vid}` , {
+        const res = await fetch(`http://localhost:1020/api/users/remove_video_likedVid/${loginData?.user?._id}/${vid}` , {
 method:"PUT",
 headers:{
   'Content-Type' : 'application/json'
@@ -108,7 +107,7 @@ const data = await res.json()
 
     const getUser = async () => {
       try {
-  const res = await fetch(`http://localhost:1020/find_user/${loginData?.user?._id}`)
+  const res = await fetch(`http://localhost:1020/api/users/find_user/${loginData?.user?._id}`)
   const data = await res.json() 
   setSubscribedArray(data?.user?.subscribedToChannels)
   
@@ -183,7 +182,7 @@ useEffect(()=>{
   const getVideoDetails = async () => {
     try {
       const vid = params?.vid
-      const res = await fetch(`http://localhost:1020/getVideoDetails/${vid} `) 
+      const res = await fetch(`http://localhost:1020/api/comments/getVideoDetails/${vid} `) 
       const data = await res.json()
 
       
@@ -199,7 +198,7 @@ useEffect(()=>{
   
   const handleSubscribe = async (v) => {
     try {
-      const res = await fetch(`http://localhost:1020/subscribed_channel/${loginData?.user?._id}/${video?.channelName?._id}` ,{
+      const res = await fetch(`http://localhost:1020/api/users/subscribed_channel/${loginData?.user?._id}/${video?.channelName?._id}` ,{
         method:"POST",
         headers:{
           'Content-Type' : 'application/json',
@@ -256,7 +255,7 @@ useEffect(()=>{
   
   const handleGetViews = async () => {
     try {
-      const res = await fetch(`http://localhost:1020/getVideoviwes/${params?.vid}`)
+      const res = await fetch(`http://localhost:1020/api/comments/getVideoviwes/${params?.vid}`)
        const data = await  res.json()
   
   setViews(data?.views?.numberOfviews?.length)
@@ -269,7 +268,7 @@ useEffect(()=>{
   const handleVideoViews = async ()=>{
     try {
   const uid = loginData?.user?._id
-  const res = await fetch(`http://localhost:1020/setVideoviwes/${params?.vid}`,{
+  const res = await fetch(`http://localhost:1020/api/comments/setVideoviwes/${params?.vid}`,{
   method:"POST",
   headers:{
   'Content-Type':"application/json",
@@ -289,8 +288,8 @@ useEffect(()=>{
   
 
 const handleDownloadedVid = async () => {
-  try {
-    const res = await fetch(`  http://localhost:1020/get_download_video/${loginData?.user?._id}`)
+  try {  
+    const res = await fetch(`  http://localhost:1020/api/users/get_download_video/${loginData?.user?._id}`)
     const data = await res.json()
     setIfDownloadedVid(data?.user?.Downloads);
      ;
@@ -313,7 +312,7 @@ const handleDownloadedVid = async () => {
     const vid = params?.vid;
     const uid = loginData?.user?._id;
   
-    const res = await fetch(`http://localhost:1020/setVideoDetails/${vid}/${uid}`, {
+    const res = await fetch(`http://localhost:1020/api/comments/save_shorts_views/${vid}/${uid}`, {
       method: "POST",
       headers: {
         'Content-Type': "application/json",
@@ -344,7 +343,7 @@ const handleDownloadedVid = async () => {
   
   const getVideos = async () => {
   try {
-  const res = await fetch(`http://localhost:1020/getVideos/${'All'}`)
+  const res = await fetch(`http://localhost:1020/api/videos/getVideos/${'All'}`)
   const data = await res.json()
   setOtherVideos(data?.videos.filter((v)=>  v._id !== params?.vid));
   }catch (error) {
@@ -356,7 +355,7 @@ const handleDownloadedVid = async () => {
   const histVideo =  async () => {
     try {
       const vid = params?.vid
-      const res = await fetch (`http://localhost:1020/setVideoHistory/${loginData?.user?._id}` , {
+      const res = await fetch (`http://localhost:1020/api/users/setVideoHistory/${loginData?.user?._id}` , {
       method : 'POST',
       headers :{
       'Content-Type' :  'application/json'
@@ -377,7 +376,7 @@ const handleDownloadedVid = async () => {
   
   const getLargeVideo =  async () => {
     try { 
-      const res = await fetch(`http://localhost:1020/getVideo_for_largeVideo/${params.vid}`) 
+      const res = await fetch(`http://localhost:1020/api/videos/getVideo_for_largeVideo/${params.vid}`) 
       const data =  await res.json()
       setVideo(data?.largePageVideo )  
   
@@ -422,7 +421,7 @@ const handleDownloadedVid = async () => {
   const name = nameRef?.current?.value;
   
   const uid = loginData?.user?._id
-      const res = await fetch(`http://localhost:1020/create_playList/${uid}`,{
+      const res = await fetch(`http://localhost:1020/api/users/create_playList/${uid}`,{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
@@ -443,7 +442,7 @@ await  handleAddToPlayList()
   
   const handleAddToPlayList = async () => {
     try {
-      const res = await fetch(`http://localhost:1020/get_playList/${loginData?.user?._id}`)
+      const res = await fetch(`http://localhost:1020/api/users/get_playList/${loginData?.user?._id}`)
       const data = await res.json()
   
   
@@ -462,7 +461,7 @@ await  handleAddToPlayList()
     try {
   const vid = video?._id
   
-      const res = await fetch (`http://localhost:1020/save_vid_in_playList/${loginData?.user?._id}`, {
+      const res = await fetch (`http://localhost:1020/api/users/save_vid_in_playList/${loginData?.user?._id}`, {
         method:"POST",
         headers:{
           'Content-Type':"application/json"
@@ -486,7 +485,7 @@ await  handleAddToPlayList()
   
     const getAllShorts = async () => {
       try {
-        const res = await fetch(`http://localhost:1020/get_all_shorts`);
+        const res = await fetch(`http://localhost:1020/api/shorts/get_all_shorts`);
         const data = await res.json();
         setShorts(data?.shorts);
       } catch (error) {
@@ -496,7 +495,7 @@ await  handleAddToPlayList()
   
   const save_vid_in_watchLater = async () => {
     try {
-      const res = await fetch(`http://localhost:1020/send_vid_for_watchLater/${loginData?.user?._id}/${video?._id}`,{
+      const res = await fetch(`http://localhost:1020/api/users/send_vid_for_watchLater/${loginData?.user?._id}/${video?._id}`,{
         method:"PUT",
         headers:{
           "Content-Type":'application/json'
@@ -521,7 +520,7 @@ await  handleAddToPlayList()
   
   const get_vid_from_watchLater = async () => {
     try {
-      const res = await fetch(`http://localhost:1020/get_vid_for_watchLater/${loginData?.user?._id}`)
+      const res = await fetch(`http://localhost:1020/api/users/get_vid_for_watchLater/${loginData?.user?._id}`)
   const data = await res.json()
   
 
@@ -618,7 +617,7 @@ function othervidCalculateDaysPassed(date) {
   
   const commentText = CommentsRef?.current?.value 
   
-  const res = await fetch(`http://localhost:1020/setComment/${video?._id}/${loginData?.user?._id}` , {
+  const res = await fetch(`http://localhost:1020/api/comments/setComment/${video?._id}/${loginData?.user?._id}` , {
   method:"POST",
   headers:{
     'Content-Type' : 'application/json',
@@ -713,7 +712,7 @@ function othervidCalculateDaysPassed(date) {
   
   
   
-    const res =  await fetch(`http://localhost:1020/setComment_likes_disLikes/${videoDetails?._id}/${commmentId} ` , {
+    const res =  await fetch(`http://localhost:1020/api/comments/setComment_likes_disLikes/${videoDetails?._id}/${commmentId} ` , {
         method:"POST",
         headers:{
           "Content-Type" : 'application/json'
@@ -738,7 +737,7 @@ function othervidCalculateDaysPassed(date) {
 
 
 
-      const res = await fetch(`http://localhost:1020/deleteDownload_video/${loginData?.user?._id}/${vid}`,{
+      const res = await fetch(`http://localhost:1020/api/users/deleteDownload_video/${loginData?.user?._id}/${vid}`,{
         method:"PUT",
         headers:{
           "Content-Type": 'apllication/json'
@@ -760,7 +759,7 @@ setDeleteDownloadModal(false)
   const handleDeleteComment = async (v) => {
     try {
       
-  const res = await fetch(`http://localhost:1020/deleteComment/${videoDetails?._id}/${v}`)
+  const res = await fetch(`http://localhost:1020/api/comments/deleteComment/${videoDetails?._id}/${v}`)
   const data = await res.json()
   await getVideoDetails()
     } catch (error) {
@@ -779,4 +778,4 @@ useEffect(()=>{
   
   return {getVideoDetails,othervidCalculateDaysPassed,currMode,calculateDaysPassed,handleDeleteDownload, download ,downloadedVid,deleteDownloadModal , setDeleteDownloadModal ,handleDownload, downloadStarted  ,  setDownloadtoStart, setDownload, handleCommentLikes_andDislikes,handleCommentsLikes, setShowMore, get_vid_from_watchLater,setIsChecked, save_vid_in_watchLater,getAllShorts,setShorts,handleSaveVideoinPlayList, histVideo,getLargeVideo,pasueData, getVideos, handleUserResponse ,handleGetViews,handleVideoViews ,setDislikeDoneorNot,setLikeDoneorNot,subscribedArray,getUser ,dispatch ,params,  setSubscribedArray  , setSubscribe,playListName,setplayListName,setExistingPlayList, setOtherVideos,dataMsg , setDataMSG, privacy , setPrivacy,setViews,setDisLikesDone, setLikeDone ,disLikes,setDisLikes, setLikes,setvideoDetails,existingPlayList,handlePlaylist,handleAddToPlayList,playlistOn,nameRef , handleCommentsLikes, handleComments,  handleCreatePlaylist,  handleCheckboxChange,isChecked,video,subscribed,handleCommentsDisLikes ,handleSubscribe,handleDeleteComment,likeDone,handleLikes,likes,handleHorizontalDots,showModal,views,days,showMore,videoDetails,CommentsRef,shorts,otherVideos,loginData  ,dislikeDone,handleDisLikes }
   
-} 
+}        

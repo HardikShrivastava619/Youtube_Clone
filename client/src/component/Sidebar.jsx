@@ -37,7 +37,7 @@ const [subscribedChannels ,setSubscribedChannels ] = useState([])
   const getSubscribedChannels = async () => {
     try {
       
-      const res = await fetch(`http://localhost:1020/get_subscribed_channels/${loginData?.user?._id}`)  
+      const res = await fetch(`http://localhost:1020/api/users/get_subscribed_channels/${loginData?.user?._id}`)  
       const data = await res.json()
       setSubscribedChannels(data?.subscribeChannels?.subscribedToChannels )
       
@@ -64,42 +64,42 @@ return (
    <div   className=  {    removesidebar2 ? 'video-page-SideBars' : 'SideBars'     }   >
    <div className="nav" >
    <div   className=  'div_1_sidebar'  >
-     <Link  to="/youtube.com" className=' nav-link sideBar-Links '    >
+     <Link  to="" className=' nav-link sideBar-Links '    >
      <IoMdHome className='sidebar-icons' />Home 
      </Link>
      
-     <Link to="/youtube.com/shorts" className=' nav-link sideBar-Links '    >
+     <Link to="/shorts" className=' nav-link sideBar-Links '    >
        <SiYoutubeshorts className='sidebar-icons'/>  Shorts
      </Link>
-     <Link to="/youtube.com/subscription" className=' nav-link sideBar-Links '    >
+     <Link to="/subscription" className=' nav-link sideBar-Links '    >
        <MdOutlineSubscriptions className='sidebar-icons '/>   Subscription
      </Link>
    
      </div>
      <div   className='div_1_sidebar'  >
      <h6 className='text-light m-3 li-sub-headings'>You &gt;</h6>
-     <Link to="/youtube.com/profile" className=' nav-link sideBar-Links '    >
+     <Link to="/profile" className=' nav-link sideBar-Links '    >
        <PiUserRectangle className='sidebar-icons '/>    Your Channel
      </Link>
-     <Link to="/youtube.com/history" className=' nav-link sideBar-Links '>
+     <Link to="/history" className=' nav-link sideBar-Links '>
        <GoHistory className='sidebar-icons '/>  History
      </Link>
    
   
-     <Link to={`/youtube.com/PlayList/${loginData?.user?._id}`} className='nav-link sideBar-Links'>
+     <Link to={`/PlayList/${loginData?.user?._id}`} className='nav-link sideBar-Links'>
        <MdOutlinePlaylistPlay className='sidebar-icons '/>  Playlists
      </Link>
-     <Link to="/youtube.com/Studio" className=' nav-link sideBar-Links '    >
+     <Link to="/Studio" className=' nav-link sideBar-Links '    >
        <BiSolidVideos className='sidebar-icons '/> Your videos
      </Link>
-     <Link to="/youtube.com/watchlater" className=' nav-link sideBar-Links '   >
+     <Link to="/watchlater" className=' nav-link sideBar-Links '   >
  <MdOutlineWatchLater className='sidebar-icons '/> Watchlater
      </Link>
    
-     <Link to="/youtube.com/LikedVideos" className=' nav-link sideBar-Links '  >
+     <Link to="/LikedVideos" className=' nav-link sideBar-Links '  >
        <BiLike className='sidebar-icons '/> Liked videos
      </Link>
-     <Link to="/youtube.com/downloads" className=' nav-link sideBar-Links '    >
+     <Link to="/downloads" className=' nav-link sideBar-Links '    >
        <LiaDownloadSolid className='sidebar-icons '/> Downloads     </Link>
    
 
@@ -108,7 +108,7 @@ return (
 <div    className='subscribe_div'  >
        <h6 className='text-light  subscribe-headings ' > Subscriptions  </h6> 
 <div  className='subscribe_div_links' >
-{subscribedChannels?.map((s)=> <Link  className= 'subscribe_sideBar-Links'   >
+{subscribedChannels?.map((s , i )=> <Link key={i} className= 'subscribe_sideBar-Links'   >
  <img  className='subscribed_channels_profile' src={s?.profilePicture?.split('..\\client\\public').join('..\\..\\')  } alt="" /> 
   <snap  className='subscribed_channels_channel_name'  > {s?.channel?.charAt(0)?.toUpperCase() + s?.channel?.slice(1) }</snap>
 

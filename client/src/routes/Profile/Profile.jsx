@@ -20,14 +20,14 @@ const {navigate,loginData} = profilejs()
     <main className='profile-main-page' >
 
 <div   className='profile-info-container'> 
-<label htmlFor="" className='profile-img' >         {  loginData?.user?.profilePicture === undefined ?  <Link  className='your_Channel_profile_noImg'  onDoubleClick={()=>{ navigate('/youtube.com/ProfilePicUPloader')}} > {loginData?.user?.name?.charAt(0)} </Link>    :       <img    onDoubleClick={()=>{ navigate('/youtube.com/ProfilePicUPloader') }}   src={loginData?.user?.profilePicture?.split('..\\client\\public').join('..\\..\\')   }  className='your_Channel_profile'   />               }            <input type="file"  id='fileInput' hidden  />  </label>
+<label htmlFor="" className='profile-img' >         {  loginData?.user?.profilePicture === undefined ?  <Link  className='your_Channel_profile_noImg'  onDoubleClick={()=>{ navigate('/ProfilePicUPloader')}} > {loginData?.user?.name?.charAt(0)} </Link>    :       <img    onDoubleClick={()=>{ navigate('/ProfilePicUPloader') }}   src={loginData?.user?.profilePicture?.split('..\\client\\public').join('..\\..\\')   }  className='your_Channel_profile'   />               }            <input type="file"  id='fileInput' hidden  />  </label>
 
 <div  >
 <h1  className='profile_name'  > {loginData?.user?.name.charAt(0).toUpperCase() + loginData?.user?.name?.slice(1)  } </h1>  
 <p  className='profile_email' > {loginData?.user?.email } </p> 
   <p className='profile_email' >More about this channel</p>
   <div   className='d-flex' > 
-    <button className='profile-info-container-btns' onClick={()=>{ navigate('/youtube.com/ProfilePicUPloader') }} > Customised channel </button>  
+    <button className='profile-info-container-btns' onClick={()=>{ navigate('/ProfilePicUPloader') }} > Customised channel </button>  
     <button className='profile-info-container-btns' > Manage videos </button>
   </div>
   </div>  </div>

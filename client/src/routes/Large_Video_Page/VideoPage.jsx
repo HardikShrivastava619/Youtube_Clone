@@ -25,7 +25,6 @@ const VideoPage = () => {
     } = VideoPageJS();
 
 
-console.log(shorts);
 
 
 
@@ -170,7 +169,7 @@ console.log(shorts);
 
 <div  className="videoPage_secondMaindiv-shorts_container" >
  
-    {shorts?.map((s,i)=><Link key={i} className="videoPage_shorts"  > 
+    {shorts?.map((s,i)=><Link key={i} to={`/shorts/${s?._id}`}  className="videoPage_shorts"  > 
     
     <img  className="videoPage_shorts_thumbnail" src={s?.thumbnail?.split('..\\client\\public\\').join('\\')  }   alt="no_thumbnail" />
     <div  className="vid-page-shortsDetails-cont" > 
@@ -186,7 +185,7 @@ console.log(shorts);
 
 <div className="othervid-container" >  
 
-{otherVideos?.map((v,i )=> <Link  key={i} className="other-vid" >  <img src={v?.thumbnail?.split('..\\client\\public\\').join('\\')  }      alt="no-thumbnail" className="othervid-thumbnail"  />
+{otherVideos?.map((v,i )=> <Link   to={`/video/${v._id}`} key={i} className="other-vid" >  <img src={v?.thumbnail?.split('..\\client\\public\\').join('\\')  }      alt="no-thumbnail" className="othervid-thumbnail"  />
 
 <div className="other-vid-details-container" >
     <h6 className="othervid-title" > {v?.title?.substring(0,60)}...  </h6>

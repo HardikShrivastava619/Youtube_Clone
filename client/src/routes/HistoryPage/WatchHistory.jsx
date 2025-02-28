@@ -81,7 +81,7 @@ return(
 
 
 
-{shortHist?.map((s,i)=><Link to={`/youtube.com/shorts/${s?._id}`}  key={i}     className='shorts-hist' >
+{shortHist?.map((s,i)=><Link to={`/shorts/${s?._id}`}  key={i}     className='shorts-hist' >
     
 <img src={`${s?.thumbnail.split('..\\client\\public').join('..\\..\\')}`}   className='shorts-hist-thumbnail' />
 <div  className='shorts-hist-info'>
@@ -104,7 +104,7 @@ return(
 : <></> }
     
 <div className='video-hist-div-container'>
-{vidHist?.map((v)=><Link to={`/youtube.com/video/${v._id}`} className= 'video-hist-div'     >
+{vidHist?.map((v, i  )=><Link  key={i} to={`/video/${v._id}`} className= 'video-hist-div'     >
 <img  src={`${v?.thumbnail?.split('..\\client\\public').join('..\\..\\')  }`}   alt='thumnail_not_uploaded' className='hist-vid-thumbnail' />
 <div  className='text-light  hist-vid-title-container'  >
 <h5    > {v?.description?.substring(0,20)} </h5>

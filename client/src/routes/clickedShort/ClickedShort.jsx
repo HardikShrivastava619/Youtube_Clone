@@ -14,12 +14,11 @@ const ClickedShorts = () => {
   const params = useParams()
 
   
-console.log(shorts);
 
 
   const getAllShorts = async () => {
     try {
-      const res = await fetch(`http://localhost:1020/get_all_shorts`);
+      const res = await fetch(`http://localhost:1020/api/shorts/get_all_shorts`);
       const data = await res.json();
   
       
@@ -84,7 +83,7 @@ console.log(shorts);
     const { likes, disLikes } = short.comments.commentID;
 
     try {
-const res =       await fetch(`http://localhost:1020/setVideoDetails/${shortId}/${userId}`, {
+const res =       await fetch(`http://localhost:1020/api/comments/save_shorts_views/${shortId}/${userId}`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -118,7 +117,7 @@ const res =       await fetch(`http://localhost:1020/setVideoDetails/${shortId}/
 
   const handleSubscribe = async (short) => {
     try {
-      const res = await fetch(`http://localhost:1020/subscribed_channel/${loginData?.user?._id}/${short?.channelName?._id}` ,{
+      const res = await fetch(`http://localhost:1020/api/users/subscribed_channel/${loginData?.user?._id}/${short?.channelName?._id}` ,{
         method:"POST",
         headers:{
           'Content-Type' : 'application/json',
@@ -140,7 +139,7 @@ const saveShortHist = async () => {
 
 const sid = params.sid
 
-const res = await fetch(`http://localhost:1020/setShortHistory/${loginData?.user?._id}`,  {
+const res = await fetch(`http://localhost:1020/api/users/setShortHistory/${loginData?.user?._id}`,  {
 method:"POST",
 headers:{
 'content-Type' : 'application/json'
@@ -161,7 +160,7 @@ const updateViews = async () => {
 
 
 
-    const res = await fetch(`http://localhost:1020/save_shorts_views/${loginData?.user?._id}/${sid} ` ,  {
+    const res = await fetch(`http://localhost:1020/api/shorts/save_shorts_views/${loginData?.user?._id}/${sid} ` ,  {
       method:'PUT',
       header:{
         'Content-Type' : 'application/json'
@@ -183,7 +182,7 @@ const [subscribedArr , setSubscribedArr] = useState([])
 
 const getSubscribedarray = async () => {
   try {
-    const res = await fetch(`http://localhost:1020/getUserSubscibedChannels/${loginData?.user?._id}`)
+    const res = await fetch(`http://localhost:1020/api/users/getUserSubscibedChannels/${loginData?.user?._id}`)
 const data = await res.json()
 setSubscribedArr(data?.usersSubscribedarray?.subscribedToChannels)
 } catch (error) {
@@ -213,8 +212,8 @@ setSubscribedArr(data?.usersSubscribedarray?.subscribedToChannels)
     <div className= 'clicked_shorts-container-clicked'  >
       <div    className= 'clicked_shorts' >
         {shorts.length === 0 ? <h1 className= 'clicked_no_short_avail'   >   No Shorts are Available right now</h1> :
-          shorts.map((short) => (
-            <div key={short._id} style={{ display: "flex", flexDirection: "row", minHeight: "100%", margin: "1vh", width: "90%", alignItems: 'center' }}>
+          shorts.map((short ) => (
+            <div key={short._id}  style={{ display: "flex", flexDirection: "row", minHeight: "100%", margin: "1vh", width: "90%", alignItems: 'center' }}>
               <div className='clicked_shorts-info_container'>
                 <div className='clicked_shorts-info_container_div'>
                   <img src={short?.channelName?.profilePicture.split('..\\client\\public').join('..\\..\\..\\')} alt="chnnl_not_loaded" className='clicked_shorts-channel-profile-img' />

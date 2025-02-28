@@ -30,7 +30,7 @@ console.log(LikedVideo);
 <button  className='dots-watchlater-vid' > ⁝ </button>
 </div>
 <div  className='d-flex payallshuuflebtn' > 
-    <button className=' palyallbtn ' onClick={()=>{navigate(`/youtube.com/WatchlaterplayAll/${LikedVideo?.videos[0]?._id}`)}} > Play all  </button> 
+    <button className=' palyallbtn ' onClick={()=>{navigate(`/WatchlaterplayAll/${LikedVideo?.videos[0]?._id}`)}} > Play all  </button> 
 <button className='shufflebtn' > Shuffle </button>
 </div>
 <div>  </div>
@@ -50,7 +50,7 @@ console.log(LikedVideo);
      <button className=  'btn btn-light'    >Videos  </button>
  </div>
 </div>
-{LikedVideo?.map((v)=>  <Link to={`/youtube.com/video/${v._id}`}   className='all-vid-likedVid'  >
+{LikedVideo?.map((v)=>  <Link to={`/video/${v._id}`}   className='all-vid-likedVid'  >
 <img src= {v?.thumbnail?.split('..\\client\\public').join('..\\..\\')   }       alt="" className='vid-thumbnail-likedVid' />
 <div   className='vid-info-main_container' > 
   <p className= 'text-white'  >  { v?.title.substring(0,110)}...  </p>

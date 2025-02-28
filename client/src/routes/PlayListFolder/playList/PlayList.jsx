@@ -20,7 +20,7 @@ const handleDelete = async (m) => {
 
     const uid = loginData?.user?._id
     
-const res = await fetch(`http://localhost:1020/deletePlayList/${m?._id}`, {
+const res = await fetch(`http://localhost:1020/api/users/deletePlayList/${m?._id}`, {
   method:"POST",
   headers:{
     'Content-Type':"application/json"
@@ -43,7 +43,7 @@ console.log(error);
 
   const handlegetPlayList = async () => {
     try {
-      const res = await fetch(`http://localhost:1020/get_playList/${loginData?.user?._id}`)
+      const res = await fetch(`http://localhost:1020/api/users/get_playList/${loginData?.user?._id}`)
       const data = await res.json()
       const parr = data?.playlist?.playlists.filter((v)=>  v?.videos?.length !== 0   )   
 
@@ -67,7 +67,7 @@ return <>
 {playList.map((m,i )=>   <div key={i}   className='playList_main_div text-white'        >
 <p className='num_of_vid' > <MdOutlinePlaylistPlay />{m?.videos?.length} video </p>
 
-    <img className='thumbnail_playlist' src={m?.videos[0]?.thumbnail.split('..\\client\\public').join('..\\..\\..\\..\\') } onClick={()=> {navigate( `/youtube.com/PlayList_largeVid/${loginData?.user?._id}/${m._id}`) } }   /> 
+    <img className='thumbnail_playlist' src={m?.videos[0]?.thumbnail.split('..\\client\\public').join('..\\..\\..\\..\\') } onClick={()=> {navigate( `/PlayList_largeVid/${loginData?.user?._id}/${m._id}`) } }   /> 
 
     <div className='playList_name_container'>
     <p> {m?.name?.substring(0,30)} </p> 
@@ -82,7 +82,7 @@ return <>
 </div>
     </div>
     <div className='playList_para' > {m.privacy} </div>
-    <Link className= 'view_full_playList' to={`/youtube.com/view_PlayList/${m?._id} `}  > View full playList </Link>
+    <Link className= 'view_full_playList' to={`/view_PlayList/${m?._id} `}  > View full playList </Link>
     </div>  )}           
 </div></>  }
 

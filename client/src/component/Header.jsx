@@ -55,7 +55,7 @@ const handleMenu = ()=>{
 
 const getUser = async () => {
   try {
-    const res = await fetch(`http://localhost:1020/find_user/${loginData?.user?._id}`)
+    const res = await fetch(`http://localhost:1020/api/users/find_user/${loginData?.user?._id}`)
     const data = await res.json()
 
 setUser(data?.user)
@@ -77,7 +77,7 @@ const handlesignOut = async (params) => {
   try {
     
 dispatch(loginSliceAction.logOutReducer())
-navigate(`/youtube.com/ChooseAccount/${loginData?.user?.email}/${loginData?.user?.name}`)
+navigate(`/ChooseAccount/${loginData?.user?.email}/${loginData?.user?.name}`)
   } catch (error) {
     console.log(error);
     
@@ -90,7 +90,8 @@ navigate(`/youtube.com/ChooseAccount/${loginData?.user?.email}/${loginData?.user
 const handleSearch = async (e) => {
   try {
     e.preventDefault()
-    const res = await fetch(`http://localhost:1020/getSearchedVid/${searchedData?.keyWord}`)
+    
+    const res = await fetch(`http://localhost:1020/api/users/getSearchedVid/${searchedData?.keyWord}`)
     const data = await res.json()
     console.log(data);
     if (data?.succcess) {
@@ -98,7 +99,7 @@ const handleSearch = async (e) => {
 setTimeout(() => {
   dispatch(searchSliceAction.searchResult(data?.result))
   setLoad(false)
-  navigate('/youtube.com/result')
+  navigate('/result')
 
 }, 3000);
 
@@ -162,7 +163,7 @@ setTimeout(() => {
         <hr />
         <li ><Link className="dropdown-item header-dropdown-link "    to=""><FcGoogle className='header-dropdown-icon' /> Google Account </Link></li>
         <li ><Link className= "dropdown-item header-dropdown-link "    onClick={handlesignOut} ><VscSignOut  className='header-dropdown-icon' /> {loginData?.user?.email ? 'Sign Out' : 'Login'}   </Link></li>
-        <li ><Link className= "dropdown-item header-dropdown-link "   to="/youtube.com/Studio"><SiYoutubestudio className='header-dropdown-icon' /> Youtube studio </Link></li>
+        <li ><Link className= "dropdown-item header-dropdown-link "   to="/Studio"><SiYoutubestudio className='header-dropdown-icon' /> Youtube studio </Link></li>
         <hr />
         <li ><Link className= "dropdown-item header-dropdown-link "   to=""><SiSpringsecurity className='header-dropdown-icon' /> Your data in YouTube</Link></li>
         

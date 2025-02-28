@@ -22,30 +22,38 @@ const Passwordform = () => {
     const handlenext = async () => {
         try {
             const password = passwordRef?.current?.value;
-            const res = await fetch(`http://localhost:1020/login/${params?.email}`, {
+      
+            const res = await fetch(`http://localhost:1020/api/users/login/${params?.email}`, {
                 method: "POST",
                 headers: {
                     'Content-Type': "application/json"
                 },
-                body: JSON.stringify({ password })
+                body: JSON.stringify({ password }),
+                credentials: "include",
             });
+    
             const data = await res.json();
-            handleLoading();
 
+      
+            handleLoading();
+    
             setTimeout(() => {
                 if (data?.success) {
                     dispatch(loginSliceAction.loginReducer(data));
-                    navigate("/youtube.com");
-                } else {
-                    alert('Incorrect Password');
+                    navigate("/");
+                alert('login Successfully')
+                } else {console.log(data);
+                
+                    alert(data?.message);
                     setLoad(false);
                 }
             }, 2000);
-
+    
         } catch (error) {
-            console.log(error);
+            console.error("Error in handlenext:", error);
         }
     };
+    
 
     const handleLoading = () => {
         setLoad(true);
@@ -59,13 +67,12 @@ const reSet = async () => {
 const password    = passwordRef1?.current?.value
 const passSecond = passwordRef2?.current?.value
 
-console.log(password,passSecond);
 
 if (password !== passSecond) {
 return    alert('Passwords do not match')
 }
 
-const res = await fetch(`http://localhost:1020/reset_password/${params?.email}` , {
+const res = await fetch(`http://localhost:1020/api/users/reset_password/${params?.email}` , {
     method:"PUT",
     headers:{
         'Content-Type':'application/json'
@@ -73,6 +80,7 @@ const res = await fetch(`http://localhost:1020/reset_password/${params?.email}` 
 body:JSON.stringify({password})
 })
 const data = await res.json()
+console.log(data);
 
 alert(data?.message)
 
@@ -120,8 +128,8 @@ alert(data?.message)
                 <div className='Passwordform-google-container'>
                     <h1><FcGoogle onClick={handleLoading} /></h1>
                     <h2 className='existing-email'>Welcome</h2>
-                    <Link to="/youtube.com/ChooseAccount" className='passworform-id-container'>
-                        <Link className='passwodform-email-first-latter text-white' to="/youtube.com/ChooseAccount" onClick={handleLoading}> H </Link>  
+                    <Link to="/ChooseAccount" className='passworform-id-container'>
+                        <Link className='passwodform-email-first-latter text-white' to="/ChooseAccount" onClick={handleLoading}> H </Link>  
                         {params?.email}
                     </Link>
                 </div>

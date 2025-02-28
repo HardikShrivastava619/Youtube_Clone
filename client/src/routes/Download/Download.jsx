@@ -15,7 +15,7 @@ const [downloadVid , SetDownloadVid] = useState([])
 
 const handleGetDownloadVideos = async () => {
   try {
-    const res = await fetch(`http://localhost:1020/getDownloadedVid/${loginData?.user?._id}`)
+    const res = await fetch(`http://localhost:1020/api/users/getDownloadedVid/${loginData?.user?._id}`)
 const data = await res.json()
 
 SetDownloadVid(data?.user?.Downloads)
@@ -45,12 +45,12 @@ function calculateDaysPassed(date) {
   return daysPassed;
 }
 
-const handleDeleteDownload = async (vid) => {
+ const handleDeleteDownload = async (vid) => {
   try {
 
 
 
-     const res = await fetch(`http://localhost:1020/deleteDownload_video/${loginData?.user?._id}/${vid}`,{
+     const res = await fetch(`http://localhost:1020/api/users/deleteDownload_video/${loginData?.user?._id}/${vid}`,{
       method:"PUT",
       headers:{
         "Content-Type": 'apllication/json'
@@ -71,7 +71,7 @@ alert(data?.message)
     <main  className='main-download-page '  >
 
 {  downloadVid?.length === 0  ?  <div className='no_download_img-container' > <img src="/youtube_img/oops.jpg"        className='no_download_img'    alt="" />      <h5  className='no_download_img_text' >   No Downloades   </h5>      </div>     :     downloadVid?.map((v,i)=> 
-<Link  to={`/youtube.com/largedownloadvideo/${v?._id}` }className='downloaded-video'  >
+<Link  key={i} to={`/largedownloadvideo/${v?._id}` }className='downloaded-video'  >
 <img src={v?.thumbnail?.split('..\\client\\public').join('..\\..\\..\\')  } className='downloaded-video-screen' />
 <div className='downloaded-video-info'  >
 <h6  className='downloaded-video-title' > {v?.title?.substring(0,30)} </h6>

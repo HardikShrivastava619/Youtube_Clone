@@ -26,7 +26,7 @@ export const ProfilePicUploader = () => {
          const email = logindata?.user?.email
      
 
-         const res = await fetch (`http://localhost:1020/getUserprofilePhoto/${email}`)
+         const res = await fetch (`http://localhost:1020/api/users/getUserprofilePhoto/${email}`)
          const data= await res.json() 
         
          setProfilePhoto(data?.user?.profilePicture?.split('..\\client\\').join('..\\..\\..\\')   ) 
@@ -70,7 +70,7 @@ export const ProfilePicUploader = () => {
      
 
 
-         const res = await fetch(`http://localhost:1020/updateprofile/${ logindata?.user?._id}/${logindata?.token}`,{
+         const res = await fetch(`http://localhost:1020/api/users/updateprofile/${ logindata?.user?._id}/${logindata?.token}`,{
            method:"POST",
            headers:{
             'Authorization': `Bearer ${logindata?.token}`           

@@ -43,15 +43,15 @@ setLoad(true)
 
 
 <div className= 'previous-id-container'    >
-<Link to="/youtube.com/Emailconfirmation"  className='email-first-latter'  onClick={handleLoading} > {params?.email.charAt(0).toUpperCase()  } </Link> 
+<Link to="/Emailconfirmation"  className='email-first-latter'  onClick={handleLoading} > {params?.email.charAt(0).toUpperCase()  } </Link> 
 <div className='name-email-container' >
 <div className='profile-name-signed-0ut-container' >
-<Link to="/youtube.com/Emailconfirmation" className= 'profile-name text-white '    onClick={handleLoading}   > {params?.name?.charAt(0).toUpperCase() + params.name.slice(1)}   </Link>  <Link className='sign-out'  > Signed out </Link>
+<Link to="/Emailconfirmation" className= 'profile-name text-white '    onClick={handleLoading}   > {params?.name?.charAt(0).toUpperCase() + params.name.slice(1)}   </Link>  <Link className='sign-out'  > Signed out </Link>
  </div>
-<Link className= 'profile-email' to="/youtube.com/Emailconfirmation" onClick={handleLoading}  > {params?.email} </Link>
+<Link className= 'profile-email' to="/Emailconfirmation" onClick={handleLoading}  > {params?.email} </Link>
 </div>
 </div>
-<Link to="/youtube.com/Signinform" className= 'another-acc'   onClick={handleLoading} ><PiUserCircle  className= 'PiUserCircle'   /> Use another account   </Link>
+<Link to="/Signinform" className= 'another-acc'   onClick={handleLoading} ><PiUserCircle  className= 'PiUserCircle'   /> Use another account   </Link>
 <Link className= 'remove-acc '   onClick={handleLoading} ><MdOutlinePersonRemoveAlt1 className= 'MdOutlinePersonRemoveAlt1'   /> Remove an account </Link>
 </div>
      </div>

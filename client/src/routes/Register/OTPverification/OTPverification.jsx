@@ -25,7 +25,7 @@ const handleNext = async (e) => {
     }
 
     try {
-        const res = await fetch(`http://localhost:1020/verify/${params.email}`, {
+        const res = await fetch(`http://localhost:1020/api/users/verify/${params.email}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -36,7 +36,7 @@ const handleNext = async (e) => {
          ;
         
 if (data.success) {
-    navigate(`/youtube.com/setPassword/${params.email}`)
+    navigate(`/setPassword/${params.email}`)
     
 
 

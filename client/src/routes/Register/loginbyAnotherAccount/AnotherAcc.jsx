@@ -40,7 +40,7 @@ const gender = params.gender
 const email  = emailref.current.value
 
 
-const res = await fetch("http://localhost:1020/register" ,  {
+const res = await fetch("http://localhost:1020/api/users/register" ,  {
 method:"POST",
 headers:{
   "Content-Type": "application/json"
@@ -53,14 +53,14 @@ const data = await res.json()
 
 if (data?.newUser?.isVerified  === false || data?.existingUser?.isVerified=== false ){
   setTimeout(() => {
-  navigate(`/youtube.com/Otpverification/${email}`)
+  navigate(`/Otpverification/${email}`)
   }, 2000);
 }else if (data?.existingUser?.isVerified  && !data?.existingUser?.password ) {
   setTimeout(()=>{
-    navigate(`/youtube.com/setPassword/${email}`)
+    navigate(`/setPassword/${email}`)
   }, 2000);
 }else if (data?.existingUser?.isVerified  && data?.existingUser?.password){   
-  navigate(`/youtube.com/Emailconfirmation/${email}`)
+  navigate(`/Emailconfirmation/${email}`)
 }
 
 

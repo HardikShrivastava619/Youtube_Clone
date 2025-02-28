@@ -139,7 +139,7 @@ if (videoFile) {
 }else(
   videoData.append('videoUrl',videoUrl)
 )
-const res = await fetch (`http://localhost:1020/uploadVideo/${logiData?.user?._id}` , {
+const res = await fetch (`http://localhost:1020/api/videos/uploadVideo/${logiData?.user?._id}` , {
 method:"POST",
 body:videoData
 })

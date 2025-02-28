@@ -32,7 +32,7 @@ const [showOtherVideos , setShowOtherVId] = useState(true)
        
        const handleGetAllDonwloadedVideos = async () => {
         try {
-          const res = await fetch(`http://localhost:1020/getDownloadedVidlarge/${loginData?.user?._id}/${params?.vid} `)
+          const res = await fetch(`http://localhost:1020/api/users/getDownloadedVidlarge/${loginData?.user?._id}/${params?.vid} `)
 const data = await res.json()
 const indx = data?.userInfo?.Downloads?.findIndex(v=> v?._id === params?.vid)
 setLargeVideo(data?.userInfo?.Downloads[indx])
@@ -96,7 +96,7 @@ setOtherVideos(data?.userInfo?.Downloads.filter(v=>v?._id !== params?.vid ))
       <div  className= 'download-playlist-heading'    ><p>Download   </p> <p className='mx-2' > <RxCross1  onClick={()=>{setShowOtherVId(!showOtherVideos)}} />  </p>  </div> 
       
 {showOtherVideos ?  <div   className='download-videos-in-playlist'  >
-      {otherVideos?.map((v,i)=><Link  to={`/youtube.com/largedownloadvideo/${v?._id}`} key={i}  className='otherDownloadedVideos'  > 
+      {otherVideos?.map((v,i)=><Link  to={`/largedownloadvideo/${v?._id}`} key={i}  className='otherDownloadedVideos'  > 
     <img      className='downloaded_otherVideos_thumbnail'      src={v?.thumbnail.split('..\\client\\public').join('..\\..\\..\\')  } alt="" />
     <div className='downloaded_otherVideos_info_container'> <h6  className= 'downloaded_otherVideos_info_title'    > {v?.title} </h6> 
     <p  className='downloaded_otherVideos_info_channelName'   > {v?.channelName?.channel} </p>

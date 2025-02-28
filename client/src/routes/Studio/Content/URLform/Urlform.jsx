@@ -25,7 +25,7 @@ const handleNext = async (e) => {
     }
 
     try {
-        const res = await fetch(`http://localhost:1020/verify/${params.email}`, {
+        const res = await fetch(`http://localhost:1020/api/users/verify/${params.email}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -34,7 +34,7 @@ const handleNext = async (e) => {
         });
         const data = await res.json();
 if (res.status === 202) {
-    navigate(`/youtube.com/setPassword/${params.email}`)
+    navigate(`/setPassword/${params.email}`)
 }} catch (error) {
         console.error("Error during verification:", error);
     }
@@ -67,7 +67,7 @@ if (res.status === 202) {
 </div>
 
 <div className='Backlink-and-btn-container' >
-<Link className='back-link'to="/youtube.com/Studio/Content" > Back </Link> 
+<Link className='back-link'to="/Studio/Content" > Back </Link> 
 <button  className='OTP-next-btn' > Next </button>
 </div> 
 </div>

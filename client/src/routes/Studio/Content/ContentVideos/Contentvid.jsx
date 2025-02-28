@@ -19,7 +19,7 @@ const loginData = useSelector(s=>s.loginData)
 
   const getVid = async () =>  {
     try {
-        const res =   await fetch(`http://localhost:1020/getuploaded_vid/${loginData?.user?._id}`)
+        const res =   await fetch(`http://localhost:1020/api/videos/getuploaded_vid/${loginData?.user?._id}`)
         const data = await res.json()
 
         setVid(data?.videos)
@@ -36,7 +36,7 @@ const handleRemove = async (v) => {
     const vid = selectedVid?._id
 console.log(vid)
 
-  const res = await fetch(`http://localhost:1020/delete_selected_vid/${vid}` , {
+  const res = await fetch(`http://localhost:1020/api/videos/delete_selected_vid/${vid}` , {
     method:"DELETE"
   } )
   const  data  = await res.json()

@@ -71,7 +71,7 @@ router.post('/uploadVideo/:uid',cpUpload, uploadVideoController);
 
 router.get('/getVideos/:category', getvideosController);
 
-router.get('/getVideo_for_largeVideo/:vid', getlargeVideoController );
+ router.get('/getVideo_for_largeVideo/:vid', getlargeVideoController );
 
 router.get('/getuploaded_vid/:uid', getuploaded_vidController);
 

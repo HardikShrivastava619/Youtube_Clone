@@ -33,7 +33,7 @@ const handleOK = async () => {
 const password= passwordRef.current.value
 console.log(password);
 
-    const res = await fetch (`http://localhost:1020/login/${params.email}`,{
+    const res = await fetch (`http://localhost:1020/api/users/login/${params.email}`,{
       method:"POST",
       headers:{
         'Content-Type' : 'application/json'
@@ -81,8 +81,8 @@ const firstlatter = params.email[0].toUpperCase()
     
     <div  className='container'  > 
     <div  className='google-passkey-container'  onClick={handleLoading} > <h1> <FcGoogle/> </h1>  <h2  className='choose-an-account' > Use your passkey to confirm it's really you </h2> 
-    <Link   to="/youtube.com/ChooseAccount" className='email-id-container'  > 
-    <Link    to="/youtube.com/ChooseAccount" className='emailconfirm-email-first-latter'  onClick={handleLoading} > {firstlatter} </Link> {params.email} 
+    <Link   to="/ChooseAccount" className='email-id-container'  > 
+    <Link    to="/ChooseAccount" className='emailconfirm-email-first-latter'  onClick={handleLoading} > {firstlatter} </Link> {params.email} 
     </Link>
     
     

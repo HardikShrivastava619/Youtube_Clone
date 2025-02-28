@@ -70,11 +70,15 @@ export const loginController = async(req,res)=>{
 
         const match = await comparePassword(password, user?.password);
         if (!match) {
+            
             return res.status(401).json({
                 success: false,
+                
                 message: "Invalid Password"
             });
         }
+
+        
 
         const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
         const cookieExpiration = new Date(Date.now() + parseInt(process.env.COOKIE_EXPIRATION, 10));
@@ -82,7 +86,7 @@ export const loginController = async(req,res)=>{
         res.cookie("youtube", token, {
             expires: cookieExpiration,
             httpOnly: true,
-        }).status(202).json({
+        }).status(202).send({
             success: true,
             message: "Login Successful",
             user,
@@ -96,7 +100,7 @@ export const loginController = async(req,res)=>{
             error: error.message,
         });
     }
-}
+} 
 
 
 

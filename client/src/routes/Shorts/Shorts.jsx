@@ -14,7 +14,7 @@ const Shorts = () => {
 
   const getAllShorts = async () => {
     try {
-      const res = await fetch(`http://localhost:1020/get_all_shorts`);
+      const res = await fetch(`http://localhost:1020/api/shorts/get_all_shorts`);
       const data = await res.json();
       setShorts(data?.shorts);
     } catch (error) {
@@ -28,7 +28,7 @@ const Shorts = () => {
     try {
   
       const vid = params?.vid
-      const res = await fetch (`http://localhost:1020/setShortHistory/${loginData?.user?._id}` , {
+      const res = await fetch (`http://localhost:1020/api/users/setShortHistory/${loginData?.user?._id}` , {
         method : 'POST',
         headers :{
           'Content-Type' :  'application/json'
@@ -95,7 +95,7 @@ const Shorts = () => {
     const { likes, disLikes } = short.comments.commentID;
 
     try {
-      await fetch(`http://localhost:1020/setVideoDetails/${shortId}/${userId}`, {
+      await fetch(`http://localhost:1020/api/comments/save_shorts_views/${shortId}/${userId}`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -124,7 +124,7 @@ const Shorts = () => {
 
   const handleSubscribe = async (short) => {
     try {
-      const res = await fetch(`http://localhost:1020/subscribed_channel/${loginData?.user?._id}/${short?.channelName?._id}` ,{
+      const res = await fetch(`http://localhost:1020/api/users/subscribed_channel/${loginData?.user?._id}/${short?.channelName?._id}` ,{
         method:"POST",
         headers:{
           'Content-Type' : 'application/json',

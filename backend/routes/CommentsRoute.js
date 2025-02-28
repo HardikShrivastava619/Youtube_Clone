@@ -3,9 +3,9 @@ import { getVideoLikesController, getVideoViewsController, setCommentsController
 import { requireSignIn } from '../middelwares/userMiddlewares.js'
 
 const router = express.Router();
+  
 
-
-router.post('/setVideoDetails/:vid/:uid' , requireSignIn , setVideoLikesController   )
+router.post('/save_shorts_views/:vid/:uid' , requireSignIn , setVideoLikesController   )
 
 router.get('/getVideoDetails/:vid'  , getVideoLikesController   )
 

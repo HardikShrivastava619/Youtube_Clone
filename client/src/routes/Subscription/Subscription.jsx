@@ -13,7 +13,7 @@ const [subscribedChannels ,setSubscribedChannels ] = useState([])
   
   const getSubscribedChannels = async () => {
     try {
-      const res = await fetch(`http://localhost:1020/get_subscribed_channels/${loginData?.user?._id}`)  
+      const res = await fetch(`http://localhost:1020/api/users/get_subscribed_channels/${loginData?.user?._id}`)  
       const data = await res.json()
       
       setSubscribedChannels(data?.subscribeChannels?.subscribedToChannels )
@@ -52,7 +52,7 @@ const [subscribedChannels ,setSubscribedChannels ] = useState([])
 <h5 className='subscribed_page_latest_heading'   > Latest </h5>
 <div  className='subscribed-videos-container' >
 
-{subscribedChannels?.map((m)=> m?.uploadedVideos?.map(( v , i )=>    <Link key={i}  to="/youtube.com/video" className='subscribed-videos' > 
+{    subscribedChannels?.map((m)=> m?.uploadedVideos?.map(( v , i )=>    <Link key={i}  to="/video" className='subscribed-videos' > 
 <img src={ v?.thumbnail.split('..\\client\\public').join('..\\..\\')} alt=""  className='video-Screen' />
 <div   className='subscribed-video-channel-container'  >
 <img src= {m?.profilePicture?.split('..\\client\\public').join('..\\..\\')}  alt="" className='video-channel-name' />

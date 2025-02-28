@@ -16,7 +16,7 @@ const handleNext = async (e) => {
     const email = emailRef.current.value; 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
     if (email && emailRegex.test(email)){
-      navigate(`/youtube.com/Passwordform/${email}`); 
+      navigate(`/Passwordform/${email}`); 
     } 
     else { alert("Please enter a valid email address."); } 
   }catch (error) {
@@ -57,9 +57,9 @@ setLoad(true)
 <div className="dropdown">
   <Link   data-bs-toggle="dropdown" aria-expanded="false" className= 'newacc'    > Create account </Link>
   <ul className="dropdown-menu  new-acc-reason ">
-    <li><Link className="dropdown-item  new-acc-reason-options"  to="/youtube.com/Nameform">For my personal Use</Link></li>
-    <li><Link className="dropdown-item  new-acc-reason-options " to="/youtube.com/Nameform" >For my child </Link></li>
-    <li><Link className="dropdown-item  new-acc-reason-options" to="/youtube.com/Nameform" > For my work or my business </Link></li>
+    <li><Link className="dropdown-item  new-acc-reason-options"  to="/Nameform">For my personal Use</Link></li>
+    <li><Link className="dropdown-item  new-acc-reason-options " to="/Nameform" >For my child </Link></li>
+    <li><Link className="dropdown-item  new-acc-reason-options" to="/Nameform" > For my work or my business </Link></li>
   </ul>
 </div>
 

@@ -43,7 +43,7 @@ const handlenext = (e)=>{
    const fullName = firstnameref.current.value.concat(" ",lastnameref.current.value)  
    handleLoading()
    setTimeout(()=>{
-   navigate(`/youtube.com/Dobform/${fullName} `)
+   navigate(`/Dobform/${fullName} `)
    },3000 )
  
   }catch (error) {
@@ -90,5 +90,5 @@ const handlenext = (e)=>{
   
       </form>)}
 
-//onClick={()=>{navigate("/youtube.com/Dobform")} }
+//onClick={()=>{navigate("/Dobform")} }
 export default Nameform

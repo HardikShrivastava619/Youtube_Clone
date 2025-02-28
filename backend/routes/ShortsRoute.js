@@ -70,7 +70,7 @@ router.get('/getuploadedShorts_sid/:uid', getuploadedShorts_vidController);
 
 router.delete('/delete_selected_short/:sid' , deleteSelectedshort )
 
-router.get('/get_all_shorts', getAllshorts )
+ router.get('/get_all_shorts', getAllshorts )
 
 
 router.put('/save_shorts_views/:uid/:sid' , saveShortsViewsController )

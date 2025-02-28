@@ -16,13 +16,13 @@ const [menu , setMenu] = useState(1)
 
 const location = useLocation()
 
-const removesidebar2Routes= [ "/youtube.com/video/:vid","/youtube.com/largedownloadvideo/:vid",'/youtube.com/WatchlaterplayAll',"/youtube.com/WatchlaterplayAll/:vid"  ,'/youtube.com/PlayList_largeVid/:vid/:pid',"/youtube.com/history","/youtube.com/Studio","/youtube.com/Studio/Content", '/youtube.com/Studio/Content_Shorts','/youtube.com/ProfilePicUPloader' ,'/youtube.com/Studio/ContentVid'  ]
+const removesidebar2Routes= [ "/video/:vid","/largedownloadvideo/:vid",'/WatchlaterplayAll',"/WatchlaterplayAll/:vid"  ,'/PlayList_largeVid/:vid/:pid',"/history","/Studio","/Studio/Content", '/Studio/Content_Shorts','/ProfilePicUPloader' ,'/Studio/ContentVid'  ]
 const removesidebar2 = removesidebar2Routes.some((r)=> matchPath({path:r , exact:true} , location.pathname ) )
 
-const removesidebarRoutes = ["/youtube.com/Studio","/youtube.com/Studio/Content", '/youtube.com/ProfilePicUPloader','/youtube.com/Studio/Content_Shorts' ,'/youtube.com/Studio/ContentVid'  ]
+const removesidebarRoutes = ["/Studio","/Studio/Content", '/ProfilePicUPloader','/Studio/Content_Shorts' ,'/Studio/ContentVid'  ]
 const  removesidear = removesidebarRoutes.some((r)=> matchPath ({path: r , exact:true}, location.pathname)) 
 
-const removestudioSidebarRoute = ["/youtube.com/Studio" ,"/youtube.com/Studio/Content", ,'/youtube.com/Studio/ContentVid','/youtube.com/Studio/Content_Shorts' ]
+const removestudioSidebarRoute = ["/Studio" ,"/Studio/Content", ,'/Studio/ContentVid','/Studio/Content_Shorts' ]
 const removestudioSidebar = removestudioSidebarRoute.some((r)=> matchPath ({path: r , exact:true}, location.pathname)) 
 
 

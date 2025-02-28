@@ -31,8 +31,8 @@ console.log(loginData);
 <>
 <div  className='options-container'   >
    <Link className='options' > Inspiration </Link>
-   <Link className='options'  to='/youtube.com/Studio/ContentVid'   >     Videos </Link>
-   <Link className='options' to='/youtube.com/Studio/Content_Shorts'  > Shorts </Link>
+   <Link className='options'  to='/Studio/ContentVid'   >     Videos </Link>
+   <Link className='options' to='/Studio/Content_Shorts'  > Shorts </Link>
    <Link className='options'> Live </Link>
    <Link className='options'> Posts </Link>
    <Link className='options'> Podcasts </Link>
