@@ -41,7 +41,6 @@ const Passwordform = () => {
                 if (data?.success) {
                     dispatch(loginSliceAction.loginReducer(data));
                     navigate("/");
-                alert('login Successfully')
                 } else {console.log(data);
                 
                     alert(data?.message);
